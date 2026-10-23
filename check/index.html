@@ -19,94 +19,128 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@700;800&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap">
 <style>
-:root{color-scheme:light;--navy:#22293A;--navy-d:#171C28;--ink:#22293A;--sub:#4F586B;--bg:#FBF8F3;--paper:#FFFFFF;--soft:#F3EEE4;--line:#E5DED2;--gold:#DFA23C;--gold-d:#A9771B;--gold-l:#F1D79A;--lineg:#06C755;--ok:#2E7D5B;--okbg:#EAF3EE;--ng:#B4552D;--ngbg:#F9ECE5;--gray:#5E6670;--graybg:#EEEBE5;--serif:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;--sans:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",sans-serif}
+:root{color-scheme:light;--navy:#1E2538;--navy-d:#141927;--ink:#232A3B;--sub:#5B6376;--bg:#FAF7F1;--paper:#FFFFFF;--soft:#F2ECE1;--line:#E3DCCF;--gold:#C9962E;--gold-d:#9A6F17;--gold-l:#EBD79F;--lineg:#06C755;--ok:#2E7D5B;--okbg:#EAF3EE;--ng:#B4552D;--ngbg:#F9ECE5;--gray:#5E6670;--graybg:#EEEBE5;--serif:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;--sans:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",sans-serif;--shadow:0 18px 50px rgba(30,37,56,.10)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:18px;font-weight:500;line-height:1.95}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:18px;font-weight:500;line-height:2}
 img{max-width:100%;height:auto;display:block}a{color:var(--navy);font-weight:700;text-decoration-color:var(--gold)}
-p{margin:0 0 .9em}p,li,h1,h2,h3,dd{text-wrap:pretty}h1,h2,h3,li,td,summary,.note{word-break:auto-phrase}
+p{margin:0 0 1em}p,li,h1,h2,h3,dd{text-wrap:pretty}h1,h2,h3,li,td,summary,.note{word-break:auto-phrase}
 b,strong{font-weight:700;color:var(--navy)}
-.wrap{max-width:1040px;margin:0 auto;padding-inline:20px}.narrow{max-width:780px;margin:0 auto;padding-inline:20px}
-.note{font-size:15.5px;color:var(--sub)}
-h1{font-family:var(--serif);font-size:clamp(30px,5.2vw,46px);font-weight:800;line-height:1.4;margin:0 0 18px;color:var(--navy);text-wrap:balance;letter-spacing:.02em}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:24px}.narrow{max-width:760px;margin:0 auto;padding-inline:24px}
+.note{font-size:15.5px;color:var(--sub);line-height:1.8}
+.label{display:inline-flex;align-items:center;gap:12px;color:var(--gold-d);font-weight:700;font-size:13.5px;letter-spacing:.22em;text-transform:uppercase}
+.label:before{content:"";width:28px;height:1px;background:var(--gold)}
+h1{font-family:var(--serif);font-size:clamp(34px,5vw,52px);font-weight:800;line-height:1.3;margin:18px 0 22px;color:var(--navy);text-wrap:balance;letter-spacing:.02em}
 h1 em{font-style:normal;color:var(--gold-d)}
-h2{font-family:var(--serif);font-size:clamp(24px,4vw,32px);font-weight:800;line-height:1.45;margin:0 0 18px;color:var(--navy);text-wrap:balance;letter-spacing:.02em;padding-bottom:12px;position:relative}
-h2:after{content:"";position:absolute;left:0;bottom:0;width:56px;height:2px;background:var(--gold)}
-h3{font-family:var(--serif);font-size:21px;font-weight:800;margin:0 0 8px;color:var(--navy);letter-spacing:.01em}
-section{padding-block:56px}section.soft{background:var(--soft)}
-.top{position:sticky;top:0;z-index:10;background:rgba(251,248,243,.96);border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px}
-.brand{display:flex;align-items:baseline;gap:10px;text-decoration:none;color:var(--navy);min-width:0}.brand b{font-family:var(--serif);font-size:21px;font-weight:800;letter-spacing:.04em}.brand span{font-size:14px;color:var(--sub);font-weight:500;white-space:nowrap}
-.top .mini{background:var(--lineg);color:#fff;border-radius:4px;padding:8px 16px;font-size:15px;text-decoration:none;white-space:nowrap;font-weight:700}
-.hero{padding-block:48px 44px;border-bottom:1px solid var(--line);background:var(--bg)}
-.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
-.hero figure{margin:0;min-width:0}.hero img{width:100%;border:1px solid var(--line)}
-.eyebrow{display:inline-block;color:var(--gold-d);font-weight:700;font-size:14.5px;letter-spacing:.08em;margin-bottom:14px;border-bottom:1px solid var(--gold-l);padding-bottom:4px}
-.lead{font-size:18.5px;color:var(--ink)}
-.btn{display:inline-block;background:var(--lineg);color:#fff;text-decoration:none;font-weight:700;font-size:18px;border-radius:4px;padding:15px 30px}
-.btn.teal{background:var(--navy)}
-.btn.outline{background:transparent;color:var(--navy);border:1px solid var(--navy)}
-.btn.sm{font-size:16px;padding:11px 20px}
-.btnnote{text-wrap:balance;font-size:15.5px;color:var(--sub);margin-top:8px}
-.scene{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--gold);padding:22px 26px;margin:0 0 22px}
-.scene .q{font-family:var(--serif);font-weight:800;color:var(--navy);font-size:19px}
-.fig{margin:22px 0;border:1px solid var(--line);background:var(--paper)}
-.fig img{width:100%}.fig figcaption{font-size:14.5px;color:var(--sub);padding:10px 14px;border-top:1px solid var(--line)}
-.checks{list-style:none;padding:0;margin:18px 0;display:grid;gap:10px}
-.checks li{padding-left:34px;position:relative;font-weight:700;color:var(--navy)}
-.checks li:before{content:"";position:absolute;left:4px;top:11px;width:16px;height:9px;border-left:2px solid var(--gold-d);border-bottom:2px solid var(--gold-d);transform:rotate(-45deg)}
-.checks span{display:block;font-weight:500;color:var(--ink);font-size:17px}
-.tatoe{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:18px 0 22px;align-items:stretch}
-.tatoe>div{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--gold);padding:18px;min-width:0}
+h2{font-family:var(--serif);font-size:clamp(28px,4.4vw,40px);font-weight:800;line-height:1.4;margin:14px 0 26px;color:var(--navy);text-wrap:balance;letter-spacing:.02em}
+h3{font-family:var(--serif);font-size:23px;font-weight:800;margin:0 0 10px;color:var(--navy);letter-spacing:.01em;line-height:1.5}
+section{padding-block:96px}section.soft{background:var(--soft)}section.dark{background:var(--navy);color:#EDE8DD}
+section.dark h2,section.dark h3,section.dark b{color:#fff}section.dark .label{color:var(--gold-l)}section.dark .label:before{background:var(--gold-l)}section.dark .note{color:#C9C3B6}
+.top{position:sticky;top:0;z-index:10;background:rgba(250,247,241,.9);backdrop-filter:blur(10px);border-bottom:1px solid rgba(201,150,46,.25)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:14px}
+.brand{display:flex;align-items:baseline;gap:12px;text-decoration:none;color:var(--navy);min-width:0}.brand b{font-family:var(--serif);font-size:22px;font-weight:800;letter-spacing:.08em}.brand span{font-size:13px;color:var(--sub);font-weight:500;white-space:nowrap;letter-spacing:.1em}
+.top .mini{background:var(--lineg);color:#fff;border-radius:999px;padding:9px 18px;font-size:14.5px;text-decoration:none;white-space:nowrap;font-weight:700}
+/* hero */
+.hero{position:relative;padding-block:72px 84px;overflow:hidden}
+.hero .bgl{position:absolute;inset:0;pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.12fr .88fr;gap:44px;align-items:center;position:relative}
+.hero figure{margin:0;min-width:0;position:relative}
+.hero figure:before{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--gold);opacity:.6}
+.hero img{width:100%;position:relative;box-shadow:var(--shadow)}
+.lead{font-size:19px;color:var(--ink);max-width:36em}
+.btn{display:inline-block;background:var(--lineg);color:#fff;text-decoration:none;font-weight:700;font-size:18px;border-radius:999px;padding:16px 34px;box-shadow:0 10px 24px rgba(6,199,85,.25)}
+.btn.teal{background:var(--navy);box-shadow:0 10px 24px rgba(30,37,56,.22)}
+.btn.outline{background:transparent;color:var(--navy);border:1px solid var(--navy);box-shadow:none}
+.btn.sm{font-size:15.5px;padding:11px 22px;box-shadow:none}
+.btnnote{text-wrap:balance;font-size:15px;color:var(--sub);margin-top:12px}
+/* scene */
+.scene{text-align:center;max-width:760px;margin:0 auto 40px;padding-inline:24px}
+.scene .q{font-family:var(--serif);font-weight:800;color:var(--navy);font-size:clamp(21px,3vw,27px);line-height:1.7;margin-bottom:14px}
+.scene .q:before{content:"“";display:block;font-size:64px;line-height:.6;color:var(--gold);font-family:Georgia,serif;margin-bottom:10px}
+.fig{margin:0;position:relative}
+.fig img{width:100%;box-shadow:var(--shadow)}
+.fig figcaption{position:relative;margin:-36px 24px 0 auto;max-width:520px;background:var(--paper);padding:16px 22px;font-size:15px;color:var(--sub);border-top:2px solid var(--gold);box-shadow:var(--shadow);line-height:1.8}
+.fig.center img{max-width:720px;margin:0 auto;box-shadow:none}
+section.dark .fig.center img{border:10px solid #FAF7F1;outline:1px solid rgba(235,215,159,.5);outline-offset:6px}
+.fig.plain img{box-shadow:none}
+.checks{list-style:none;padding:0;margin:56px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:1000px}
+.checks li{padding-top:18px;border-top:1px solid var(--gold);font-family:var(--serif);font-weight:800;color:var(--navy);font-size:19px;line-height:1.6}
+.checks span{display:block;font-family:var(--sans);font-weight:500;color:var(--sub);font-size:16px;margin-top:8px;line-height:1.8}
+/* tatoe (dark) */
+.tatoe{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;margin:40px 0 28px;border-top:1px solid rgba(235,215,159,.35)}
+.tatoe>div{padding:26px 22px 8px;min-width:0;border-right:1px solid rgba(235,215,159,.25);position:relative}
+.tatoe>div:last-child{border-right:0}
 .tatoe .ic{display:none}
-.tatoe b{display:block;font-family:var(--serif);font-size:18px}
-.tatoe small{text-wrap:balance;display:block;color:var(--sub);font-size:15px;line-height:1.6;margin-top:6px}
-.memo{background:var(--paper);border:1px solid var(--line);padding:18px 22px;margin:22px 0;font-size:18px}
-.memo .who{display:block;font-family:var(--serif);font-size:14.5px;color:var(--gold-d);font-weight:800;margin-bottom:4px;letter-spacing:.06em}
-.koe{display:grid;gap:8px;margin:14px 0 18px;padding:0;list-style:none}
-.koe li{padding:8px 16px;border-left:3px solid var(--gold);font-weight:700;color:var(--navy);font-size:17px;background:var(--paper)}
-.steps{counter-reset:s;display:grid;gap:30px;margin:20px 0}
-.step{display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:start}
-.step:before{counter-increment:s;content:counter(s);width:48px;height:48px;background:var(--navy);color:var(--gold-l);font-family:var(--serif);font-weight:800;font-size:22px;display:grid;place-items:center}
-.step>div{min-width:0;border-left:1px solid var(--line);padding-left:16px}
-.step h3{margin-top:8px}
-.checker{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--gold);padding:22px 22px;margin:14px 0}
-.checker label{display:block;font-weight:700;color:var(--navy);margin-bottom:8px}
-.upd{font-size:14.5px;color:var(--sub);margin:0 0 10px}
-.inrow{display:flex;gap:10px;flex-wrap:wrap}
-.inrow input{flex:1 1 240px;min-width:0;font:inherit;font-size:19px;padding:13px 16px;border:1px solid #B9B2A6;border-radius:4px;background:#fff}
-.inrow input:focus{outline:3px solid var(--gold-l);outline-offset:2px;border-color:var(--navy)}
-.inrow button{font:inherit;font-weight:700;font-size:18px;background:var(--navy);color:#fff;border:0;border-radius:4px;padding:13px 24px;cursor:pointer}
+.tatoe b{display:block;font-family:var(--serif);font-size:19px;color:var(--gold-l);margin-bottom:6px}
+.tatoe small{display:block;color:#D9D3C6;font-size:15.5px;line-height:1.8}
+.tatoe>div:before{content:counter(t,decimal-leading-zero);counter-increment:t;display:block;font-family:var(--serif);color:var(--gold);font-size:14px;letter-spacing:.2em;margin-bottom:8px}
+section.dark .wrap{counter-reset:t}
+.memo{background:var(--paper);border-left:3px solid var(--gold);padding:22px 28px;margin:28px 0;font-size:18px;box-shadow:var(--shadow)}
+section.dark .memo{background:rgba(255,255,255,.06);color:#EDE8DD;box-shadow:none;border-left-color:var(--gold-l)}
+.memo .who{display:block;font-family:var(--serif);font-size:14px;color:var(--gold-d);font-weight:800;margin-bottom:6px;letter-spacing:.14em}
+/* koe */
+.koe{display:grid;gap:0;margin:28px 0;padding:0;list-style:none;max-width:680px}
+.koe li{padding:18px 0;border-bottom:1px solid var(--line);font-family:var(--serif);font-weight:800;color:var(--navy);font-size:21px;line-height:1.6}
+.koe li:before{content:"—";color:var(--gold);margin-right:14px}
+/* steps */
+.steps{counter-reset:s;display:grid;gap:64px;margin:48px 0 0}
+.step{display:grid;grid-template-columns:120px 1fr;gap:28px;align-items:start}
+.step:before{counter-increment:s;content:counter(s,decimal-leading-zero);font-family:var(--serif);font-weight:800;font-size:76px;line-height:1;color:var(--gold);letter-spacing:-.02em;opacity:.9}
+.step>div{min-width:0}
+.step h3{margin-top:8px;font-size:25px}
+.checker{background:var(--paper);padding:30px 30px;margin:18px 0;box-shadow:var(--shadow);border-top:3px solid var(--gold)}
+.checker label{display:block;font-weight:700;color:var(--navy);margin-bottom:10px}
+.upd{font-size:14px;color:var(--sub);margin:0 0 14px;letter-spacing:.02em}
+.inrow{display:flex;gap:12px;flex-wrap:wrap}
+.inrow input{flex:1 1 240px;min-width:0;font:inherit;font-size:19px;padding:14px 4px;border:0;border-bottom:2px solid var(--navy);border-radius:0;background:transparent}
+.inrow input::placeholder{color:#9AA0AE}
+.inrow input:focus{outline:none;border-bottom-color:var(--gold)}
+.inrow button{font:inherit;font-weight:700;font-size:17px;background:var(--navy);color:#fff;border:0;border-radius:999px;padding:14px 30px;cursor:pointer}
 .inrow button:disabled{opacity:.6;cursor:wait}
-.result{margin-top:18px;display:none;overflow-wrap:anywhere;border-top:1px solid var(--line);padding-top:16px}
-.result .head{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
-.tag{display:inline-block;border-radius:3px;padding:3px 12px;font-weight:700;font-size:15px}
-.tag.ok{background:var(--okbg);color:var(--ok)}.tag.ng{background:var(--ngbg);color:var(--ng)}.tag.gray{background:var(--graybg);color:var(--gray)}.tag.gold{background:#F8EBCB;color:var(--gold-d)}
-.result .host{font-family:var(--serif);font-size:21px;font-weight:800;color:var(--navy)}
-.result dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:12px 0;font-size:18px}
-.result dt{font-weight:700;color:var(--sub);white-space:nowrap}.result dd{margin:0;min-width:0}
-.result .src{font-size:15px;color:var(--sub)}
-.result .next{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-.copybox{background:var(--soft);border:1px solid var(--line);padding:16px 18px;position:relative;font-size:18px;white-space:pre-wrap;line-height:1.8}
-.copybtn{display:inline-block;margin-top:10px;font:inherit;font-weight:700;font-size:16px;background:var(--navy);color:#fff;border:0;border-radius:4px;padding:10px 20px;cursor:pointer}
-.copybtn.done{background:var(--ok)}
-.cta{background:var(--navy);color:#fff;padding:40px 26px;text-align:center;border-top:3px solid var(--gold)}
-.cta h2{color:#fff}.cta h2:after{left:50%;transform:translateX(-50%)}.cta p{color:#E6E2D8}.cta .btnnote{color:#E6E2D8;font-size:16px}
-.cta .btn{font-size:19px;padding:17px 34px}
-.price{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0}
-.price>div{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--gold);padding:20px 22px;min-width:0}
-.price .big{font-family:var(--serif);font-size:34px;font-weight:800;color:var(--navy);line-height:1.2}
-.price .big small{font-family:var(--sans);font-size:16px;color:var(--sub);font-weight:500}
-.faq details{background:var(--paper);border:1px solid var(--line);padding:12px 18px;margin:8px 0}
-.faq summary{font-weight:700;color:var(--navy);cursor:pointer;font-size:17.5px}
-.faq details p{margin:10px 0 4px;font-size:18px}
-.jp{font-size:15px;color:var(--sub)}
-footer{padding-block:36px;border-top:1px solid var(--line);font-size:15px;color:var(--sub)}
-footer a{font-weight:700}
-@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}.tatoe,.price{grid-template-columns:1fr}}
-@media (max-width:600px){.brand span{display:none}.price .big{font-size:28px}.cta{padding:30px 14px}.cta .btn{font-size:17.5px;padding:16px 20px;white-space:nowrap}.step{grid-template-columns:40px 1fr;gap:10px}.step:before{width:40px;height:40px;font-size:18px}.step>div{padding-left:10px}.result dl{grid-template-columns:1fr;gap:2px 0}.result dt{margin-top:10px}.checker{padding:16px 14px}.inrow button{flex:1 1 100%}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--gold-l);outline-offset:2px}
+.result{margin-top:22px;display:none;overflow-wrap:anywhere;border-top:1px solid var(--line);padding-top:18px}
+.result .head{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+.tag{display:inline-block;border-radius:999px;padding:4px 14px;font-weight:700;font-size:14px;letter-spacing:.04em}
+.tag.ok{background:var(--okbg);color:var(--ok)}.tag.ng{background:var(--ngbg);color:var(--ng)}.tag.gray{background:var(--graybg);color:var(--gray)}.tag.gold{background:#F7ECCF;color:var(--gold-d)}
+.result .host{font-family:var(--serif);font-size:23px;font-weight:800;color:var(--navy)}
+.result dl{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;margin:14px 0;font-size:17.5px;line-height:1.85}
+.result dt{font-weight:700;color:var(--gold-d);white-space:nowrap;font-size:14px;letter-spacing:.1em;padding-top:4px}.result dd{margin:0;min-width:0}
+.result .src{font-size:14.5px;color:var(--sub);line-height:1.7}
+.result .next{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.copybox{background:var(--paper);padding:22px 26px;position:relative;font-size:17.5px;white-space:pre-wrap;line-height:1.85;box-shadow:var(--shadow)}
+.copybtn{display:inline-block;margin-top:12px;font:inherit;font-weight:700;font-size:15.5px;background:transparent;color:var(--navy);border:1px solid var(--navy);border-radius:999px;padding:9px 22px;cursor:pointer}
+.copybtn.done{background:var(--ok);color:#fff;border-color:var(--ok)}
+.answer{margin-top:80px;padding-top:56px;border-top:1px solid var(--line)}
+/* cta */
+.cta{background:var(--navy);color:#fff;padding:56px 28px;text-align:center;position:relative;margin-top:36px}
+.cta:before{content:"";position:absolute;inset:12px;border:1px solid rgba(235,215,159,.45);pointer-events:none}
+.cta h2{color:#fff;font-size:clamp(24px,3.6vw,32px);margin-top:0}.cta p{color:#D8D2C4}.cta .btnnote{color:#D8D2C4;font-size:15px}
+.cta .btn{font-size:19px;padding:18px 40px}
+/* price */
+.price{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:28px 0}
+.price>div{background:var(--paper);padding:30px 30px;min-width:0;box-shadow:var(--shadow);border-top:3px solid var(--gold)}
+.price .big{font-family:var(--serif);font-size:40px;font-weight:800;color:var(--navy);line-height:1.2;margin-bottom:8px}
+.price .big small{font-family:var(--sans);font-size:15px;color:var(--sub);font-weight:500;letter-spacing:.04em}
+/* faq */
+.faq details{border-bottom:1px solid var(--line);padding:16px 0}
+.faq details:first-of-type{border-top:1px solid var(--line)}
+.faq summary{font-family:var(--serif);font-weight:800;color:var(--navy);cursor:pointer;font-size:19px;list-style:none;position:relative;padding-right:34px;line-height:1.6}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";position:absolute;right:4px;top:0;color:var(--gold);font-size:26px;line-height:1.3;font-family:Georgia,serif}
+.faq details[open] summary:after{content:"−"}
+.faq details p{margin:12px 0 4px;font-size:17.5px;line-height:1.9}
+.jp{font-size:14.5px;color:#B9B3A6}
+footer{background:var(--navy-d);color:#C9C3B6;padding-block:48px;font-size:15px;line-height:1.9}
+footer a{color:#EBD79F;font-weight:700}
+/* motion */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease}
+.js .rv.in{opacity:1;transform:none}
+.js .hero figure{opacity:0;transform:translateX(24px);animation:heroin 1.2s .25s ease forwards}
+@keyframes heroin{to{opacity:1;transform:none}}
+@media (max-width:960px){.hero .wrap{grid-template-columns:1fr}.hero figure:before{inset:12px -12px -12px 12px}.checks{grid-template-columns:1fr;gap:18px}.tatoe{grid-template-columns:1fr}.tatoe>div{border-right:0;border-bottom:1px solid rgba(235,215,159,.25);padding:20px 4px}.price{grid-template-columns:1fr}.step{grid-template-columns:1fr;gap:6px}.step:before{font-size:56px}section{padding-block:72px}}
+@media (max-width:600px){.label{font-size:12.5px;letter-spacing:.1em;gap:10px}.label:before{width:20px;flex:0 0 20px}.brand span{display:none}.cta{padding:40px 18px}.cta .btn{font-size:17.5px;padding:16px 22px;white-space:nowrap}.result dl{grid-template-columns:1fr;gap:2px 0}.result dt{margin-top:12px}.checker{padding:22px 18px}.inrow button{flex:1 1 100%}.fig figcaption{margin:-20px 12px 0;max-width:none}.copybox{padding:18px 18px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .rv{opacity:1;transform:none;transition:none}.js .hero figure{animation:none;opacity:1;transform:none}}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--gold-l);outline-offset:3px}
 </style>
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
@@ -117,9 +151,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 
 <main>
 
-<div class="hero"><div class="wrap">
+<div class="hero"><svg class="bgl" viewBox="0 0 1400 700" preserveAspectRatio="none" aria-hidden="true"><path d="M-50 520 C 300 420, 600 640, 1000 500 S 1500 380, 1500 380" fill="none" stroke="#C9962E" stroke-opacity=".28" stroke-width="1"/><path d="M-50 560 C 350 470, 650 690, 1050 540 S 1500 430, 1500 430" fill="none" stroke="#C9962E" stroke-opacity=".16" stroke-width="1"/></svg><div class="wrap">
   <div>
-    <span class="eyebrow">2026年10月21日発表　ホームページの部品（PHP）の不具合について</span>
+    <span class="label">2026年10月21日発表　PHPの不具合について</span>
     <h1>ニュースの件、<br>うちのホームページは？<br><em>3分の確かめ方</em></h1>
     <p class="lead">置き場所の会社の多くは、10月22日までに直す作業を終えたと発表しています。<br>社長が確かめるのは、「古いバージョンを選んだままになっていないか」の1点です。<br>下にホームページの住所（www.〜）を入れると、多くの場合、置き場所の会社とその対応が分かります。</p>
     <p><a class="btn teal" href="#check">住所を入れて確かめる</a></p>
@@ -128,44 +162,48 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   <figure><img src="img/hero.jpg" alt="" width="1536" height="1024"></figure>
 </div></div>
 
-<section><div class="narrow">
-  <div class="scene">
+<section><div class="wrap">
+  <span class="label rv">このページでできること</span>
+  <div class="scene rv">
     <p class="q">来週、取引先や銀行の担当者から「お宅のホームページ、大丈夫でした？」と聞かれるかもしれません。</p>
     <p>「置き場所の会社の対応を確認しました。10月22日に終わっています」と一言で返せれば、話はそこで終わります。<br>このページは、その一言に必要な材料を集めるためのものです。</p>
   </div>
-  <figure class="fig"><img src="img/scene.jpg" alt="" width="1536" height="1024"><figcaption>取引先に聞かれたとき、落ち着いて一言で返せる。それがこのページの目的です。</figcaption></figure>
-  <ul class="checks">
+  <figure class="fig rv"><img src="img/scene.jpg" alt="" width="1536" height="1024"><figcaption>取引先に聞かれたとき、落ち着いて一言で返せる。それがこのページの目的です。</figcaption></figure>
+  <ul class="checks rv">
     <li>うちの置き場所が直したかどうか分かる<span>置き場所の会社と、その会社の発表が分かります。</span></li>
     <li>業者さんに送る文が、そのまま使える<span>コピーして送るだけです。</span></li>
     <li>取引先に聞かれたときの一言が決まる<span>確認が済んだとき、まだのとき、2つの言い方を用意しました。</span></li>
   </ul>
 </div></section>
 
-<section class="soft"><div class="narrow">
-  <h2>何が起きたのか。ビルにたとえると、こうです</h2>
+<section class="dark"><div class="wrap">
+  <span class="label rv">何が起きたのか</span>
+  <h2 class="rv">ビルにたとえると、こうです</h2>
   <p>ホームページは、ビルに入っているテナントのお店のようなものです。<br>お店（ホームページ）は、ビルの共用設備（ホームページを動かしている部品「PHP」）の上で動いています。<br>10月21日の夜、その共用設備に不具合が見つかり、直したバージョン（版）が出ました。</p>
-  <figure class="fig"><img src="img/tatoe.jpg" alt="" width="1536" height="1024"><figcaption>いちばん下の共用設備がPHP、真ん中の管理会社が置き場所の会社、いちばん上のお店がホームページです。</figcaption></figure>
-  <div class="tatoe">
-    <div><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h3M13 7h3M8 11h3M13 11h3M8 15h3M13 15h3M10 21v-3h4v3"/></svg></div><b>共用設備＝PHP</b><small>ここに不具合。直すのは管理会社の仕事です</small></div>
-    <div><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0 5 5l-9 9a2 2 0 0 1-3-3l9-9z"/><path d="M15 3l6 6"/></svg></div><b>管理会社＝置き場所の会社</b><small>エックスサーバー、さくら、ロリポップ など。多くは10月22日までに作業を終えています</small></div>
-    <div><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l1.5-5h15L21 9"/><path d="M3 9a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/><path d="M5 12v9h14v-9M10 21v-5h4v5"/></svg></div><b>お店＝ホームページ</b><small>社長が見るのは、古い設備のままになっていないか、です</small></div>
+  <figure class="fig center plain rv"><img src="img/tatoe.jpg" alt="" width="1536" height="1024"></figure>
+  <div class="tatoe rv">
+    <div><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h3M13 7h3M8 11h3M13 11h3M8 15h3M13 15h3M10 21v-3h4v3"/></svg></div><b>共用設備＝PHP</b><small>いちばん下の階。ここに不具合。直すのは管理会社の仕事です</small></div>
+    <div><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6.5a4 4 0 0 0 5 5l-9 9a2 2 0 0 1-3-3l9-9z"/><path d="M15 3l6 6"/></svg></div><b>管理会社＝置き場所の会社</b><small>真ん中の階。エックスサーバー、さくら、ロリポップ など。多くは10月22日までに作業を終えています</small></div>
+    <div><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l1.5-5h15L21 9"/><path d="M3 9a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/><path d="M5 12v9h14v-9M10 21v-5h4v5"/></svg></div><b>お店＝ホームページ</b><small>いちばん上の階。社長が見るのは、古い設備のままになっていないか、です</small></div>
   </div>
-  <div class="memo">ホームページの作成ソフト（WordPress）や追加機能（プラグイン）を最新にしても、この部品は変わりません。<br>レンタルサーバーなら、直すのは置き場所の会社の仕事です。<br>慌てて触る必要はなく、確かめるだけで足ります。</div>
+  <div class="memo rv">ホームページの作成ソフト（WordPress）や追加機能（プラグイン）を最新にしても、この部品は変わりません。<br>レンタルサーバーなら、直すのは置き場所の会社の仕事です。<br>慌てて触る必要はなく、確かめるだけで足ります。</div>
   <p class="note">国も注意を呼びかけている話ですが、社長の確認は小さなものです。<br>8.1以前の古いバージョンは公式の直した版が出ていません。置き場所の会社が独自に直している場合が多いですが、新しいバージョンへの切り替えがすすめられています。<br>自社サーバーやクラウドに置いている会社は、業者さんかIT担当の方に聞いてください。</p>
 </div></section>
 
 <section><div class="narrow">
-  <h2>つまずきやすいのは、この3つ</h2>
-  <ul class="koe"><li>「誰に聞けばいいのか分からない」</li><li>「業者さんと連絡がつかない」</li><li>「管理画面を見たことがない」</li></ul>
+  <span class="label rv">よくあるつまずき</span>
+  <h2 class="rv">つまずきやすいのは、この3つ</h2>
+  <ul class="koe rv"><li>「誰に聞けばいいのか分からない」</li><li>「業者さんと連絡がつかない」</li><li>「管理画面を見たことがない」</li></ul>
   <p>どれも、よくあることです。<br>置き場所の会社が分かれば、次に聞く相手が決まります。</p>
 </div></section>
 
 <section class="soft" id="check"><div class="narrow">
-  <h2>3分で終わる、確かめる順番</h2>
-  <p>手順は3つ。1つ目だけでも、状況は分かります。</p>
-  <figure class="fig"><img src="img/steps.jpg" alt="" width="1536" height="1024"><figcaption>左から、住所を入れて置き場所を知る／管理画面でバージョンを見る／業者さんに質問文を送る。</figcaption></figure>
+  <span class="label rv">確かめる順番</span>
+  <h2 class="rv">3分で終わる、確かめる順番</h2>
+  <p class="rv">手順は3つ。1つ目だけでも、状況は分かります。</p>
+  <figure class="fig plain rv"><img src="img/steps.jpg" alt="" width="1536" height="1024"></figure>
   <div class="steps">
-    <div class="step"><div>
+    <div class="step rv"><div>
       <h3>ホームページの住所を入れて、置き場所の会社を知る</h3>
       <div class="checker">
         <p class="upd">各社の発表は 2026年10月23日 19時時点。最新の状況は、結果に出る公式のお知らせでご確認ください。</p>
@@ -185,14 +223,14 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
       </div>
       <p class="note">結果が「推測」や「分からない」のときは、置き場所の会社からの請求メールや、業者さんの見積書に会社名が書いてあります。</p>
     </div></div>
-    <div class="step"><div>
+    <div class="step rv"><div>
       <h3>管理画面に入れる人は、部品のバージョンを見る</h3>
       <p>WordPressなら、管理画面の「ツール」→「サイトヘルス」→「情報」→「サーバー」に「PHPバージョン」があります。</p>
       <p><b>8.2系なら 8.2.35 以上、8.3系なら 8.3.36 以上、8.4系なら 8.4.27 以上、8.5系なら 8.5.12 以上</b>が、直したバージョンです。<br>番号が古く見えても、置き場所の会社が番号を変えずに中で直していることがあります（ConoHa・お名前.com・mixhost など）。その場合は、1の結果を優先してください。</p>
       <p><b>8.1以下</b>のときは、切り替えがすすめられています。表示が崩れることがあるので、控え（バックアップ）を取ったうえで、業者さんかLINEにご相談ください。</p>
       <p class="note">管理画面を見たことがない方は、ここは飛ばして3へ。</p>
     </div></div>
-    <div class="step"><div>
+    <div class="step rv"><div>
       <h3>作ってくれた業者さんに、この文をそのまま送る</h3>
       <div class="copybox" id="q3">〇〇様
 
@@ -211,19 +249,23 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
     </div></div>
   </div>
 
-  <h3 style="margin-top:36px">取引先やお客さまに聞かれたら、こう答える</h3>
+  <div class="answer rv">
+  <span class="label">聞かれたときの一言</span>
+  <h2>取引先やお客さまに聞かれたら、こう答える</h2>
   <p class="note">確認が済んだ場合と、まだの場合の2つです。日付は、置き場所の会社や業者さんの返事に合わせて入れ替えてください。</p>
   <div class="copybox" id="a1">ご心配をおかけしました。うちのホームページの置き場所の会社が対応を済ませたことを確認しています（10月22日完了）。引き続き、通常どおりご覧いただけます。</div>
   <button class="copybtn" type="button" data-copy="a1">確認が済んだ場合の文をコピー</button>
   <div class="copybox" id="a2" style="margin-top:14px">ご心配をおかけしています。うちのホームページの置き場所の会社に、対応の状況を確認しているところです。分かりしだいお知らせします。</div>
   <button class="copybtn" type="button" data-copy="a2">確認中の場合の文をコピー</button>
+  </div>
 </div></section>
 
 <section id="line"><div class="narrow">
-  <h2>業者さんがいなくても、住所を送れば次の一手が分かります</h2>
+  <span class="label rv">業者さんがいないとき</span>
+  <h2 class="rv">業者さんがいなくても、住所を送れば次の一手が分かります</h2>
   <p>ホームページの住所だけ、LINEで送ってください。<br>インターネットに公開されている情報から、置き場所の会社と、部品のバージョンが分かるかを調べて、メモでお返しします。<br>分かるのは外から見える範囲までです。そのうえで、次に聞く相手をお伝えします。<br>ご自分の会社のホームページに限ります。</p>
-  <div class="memo"><span class="who">fulfull 森川より</span>僕の会社のホームページも、古い部品（8.0）のままでした。<br>控えを取って 8.3 に替え、使っていない古いサイトは閉じました。<br>同じことを、僕も今週やっています。</div>
-  <div class="cta">
+  <div class="memo rv"><span class="who">fulfull 森川より</span>僕の会社のホームページも、古い部品（8.0）のままでした。<br>控えを取って 8.3 に替え、使っていない古いサイトは閉じました。<br>同じことを、僕も今週やっています。</div>
+  <div class="cta rv">
     <h2>住所を送ると、外から見えた範囲のメモが届きます</h2>
     <p>無料です。お返しはメモだけで、商品のご案内は入れません。</p>
     <p><a class="btn" href="https://line.me/R/oaMessage/@260picvu/?%E7%A2%BA%E8%AA%8D">LINEを開いて「確認」を送る</a></p>
@@ -232,7 +274,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 </div></section>
 
 <section class="faq soft"><div class="narrow">
-  <h2>よくある質問</h2>
+  <span class="label rv">よくある質問</span>
+  <h2 class="rv">よくある質問</h2>
   <details><summary>Wix・Jimdo・BASE・カラーミー・STUDIO で作ったホームページは？</summary><p>その会社が置き場所も部品も管理しています。部品を触る作業はありません。お知らせが出ていれば、読めば十分です。</p></details>
   <details><summary>WordPressを最新にすれば直りますか？</summary><p>WordPressを最新にしても、この不具合は変わりません。不具合は、WordPressの下で動く部品（PHP）の中にあるためです。レンタルサーバーなら、直すのは置き場所の会社です。</p></details>
   <details><summary>置き場所の会社が「対応済み」なら、もう何もしなくていい？</summary><p>多くの会社は、それで確認は完了です。1つだけ、「古いバージョン（8.1以前）を選んだまま」になっていないかを見てください。古いバージョンは、公式の直した版が出ていません。</p></details>
@@ -242,9 +285,10 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 </div></section>
 
 <section><div class="narrow">
-  <h2>古いホームページは、作り直す手もあります</h2>
+  <span class="label rv">もう1つの選択肢</span>
+  <h2 class="rv">古いホームページは、作り直す手もあります</h2>
   <p>「作った業者さんがもういない」「10年前のまま」という会社には、作り直しも1つの手です。<br>fulfullが作るホームページは、できあがった画面をそのまま置く作りで、PHPを使いません。<br>そのため今回の件の対象外で、同じ種類の更新作業もありません。</p>
-  <div class="price">
+  <div class="price rv">
     <div><div class="big">29,800<small>円（税込・1回）</small></div><p>今の内容のまま、スマホで開いて、そのまま問い合わせできるホームページに作り直します。<br>先に見本をお見せし、気に入ったら進めます。</p></div>
     <div><div class="big">月 4,980<small>円（税込・任意）</small></div><p>文章や写真の差し替えは、LINEで送るだけです。<br>置き場所やドメインの会社から届くお知らせの読み解きと対応、年1回の点検も含みます。</p></div>
   </div>
@@ -338,6 +382,8 @@ document.querySelectorAll('.copybtn').forEach(b=>b.addEventListener('click',asyn
   try{await navigator.clipboard.writeText(t);ok=true;}catch(e){const r=document.createRange();r.selectNodeContents($(b.dataset.copy));const s=getSelection();s.removeAllRanges();s.addRange(r);try{ok=document.execCommand('copy');}catch(_){}}
   b.textContent=ok?'コピーしました':'長押しで選んでコピーしてください';b.classList.toggle('done',ok);setTimeout(()=>{b.textContent=label;b.classList.remove('done');},2500);
 }));
+
+(function(){try{const els=document.querySelectorAll('.rv');if(!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('in'));return;}const io=new IntersectionObserver(es=>{es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{rootMargin:'0px 0px -8% 0px',threshold:.08});els.forEach(e=>io.observe(e));setTimeout(()=>els.forEach(e=>e.classList.add('in')),4000);}catch(e){document.querySelectorAll('.rv').forEach(e=>e.classList.add('in'));}})();
 </script>
 </body>
 </html>
