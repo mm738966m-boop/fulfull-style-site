@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>PHPのニュース、うちのホームページは？3分の確かめ方｜fulfull</title>
+<meta name="description" content="10月21日に発表されたホームページの部品（PHP）の不具合。置き場所の会社の多くは直す作業を終えたと発表しています。社長が確かめるのは1点だけ。ホームページの住所を入れると置き場所の会社と今の状況が分かります。業者さんに送る質問文、取引先に聞かれたときの一言つき。">
+<link rel="canonical" href="https://fulfull-style.com/check/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="fulfull ホームページ制作">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="ニュースの件、うちのホームページは？3分の確かめ方">
+<meta property="og:description" content="置き場所の会社の多くは直し済みと発表。社長が確かめるのは1点だけ。住所を入れると置き場所が分かります。業者さんに送る質問文つき。">
+<meta property="og:url" content="https://fulfull-style.com/check/">
+<meta property="og:image" content="https://fulfull-style.com/check/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;800;900&display=swap">
+<style>
+:root{color-scheme:light;--teal:#0E7C86;--deep:#0A5A62;--ink:#1C3236;--ink2:#4A6468;--soft:#EEF6F7;--line:#D5E4E6;--gold:#7F5C14;--goldfill:#D9A441;--goldbg:#FBF4E3;--bg:#fff;--ok:#1E7D5A;--okbg:#EAF6F0;--ng:#A8483A;--ngbg:#FBEEEB;--gray:#5E6B6D;--graybg:#F1F3F3;--lineg:#06C755;--font:"Noto Sans JP","Hiragino Sans","Hiragino Kaku Gothic ProN",sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:18px;font-weight:500;line-height:1.9}
+img{max-width:100%;height:auto}a{color:var(--teal);font-weight:700}
+p{margin:0 0 .9em}p,li,h1,h2,h3,dd{text-wrap:pretty}h1,h2,h3,li,td,summary,.note{word-break:auto-phrase}
+b,strong{font-weight:800;color:var(--deep)}
+.wrap{max-width:980px;margin:0 auto;padding-inline:20px}.narrow{max-width:760px;margin:0 auto;padding-inline:20px}
+.note{font-size:15.5px;color:var(--ink2)}
+h1{font-size:clamp(28px,5.6vw,44px);font-weight:900;line-height:1.35;margin:0 0 14px;color:var(--deep);text-wrap:balance}
+h1 em{font-style:normal;color:var(--teal)}
+h2{font-size:clamp(24px,4.2vw,32px);font-weight:900;line-height:1.4;margin:0 0 16px;color:var(--deep);text-wrap:balance}
+h3{font-size:20px;font-weight:800;margin:0 0 8px;color:var(--teal)}
+section{padding-block:52px}section.soft{background:var(--soft)}
+.top{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px}
+.brand{display:flex;align-items:baseline;gap:8px;text-decoration:none;color:var(--deep);min-width:0}.brand b{font-size:20px}.brand span{font-size:14px;color:var(--ink2);font-weight:700;white-space:nowrap}
+.top .mini{background:var(--lineg);color:#fff;border-radius:999px;padding:8px 16px;font-size:15px;text-decoration:none;white-space:nowrap;font-weight:800}
+.hero{padding-block:40px 36px;background:linear-gradient(180deg,#F6FBFB 0%,#fff 100%)}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:center}
+.hero img{width:100%;max-width:300px;justify-self:center;animation:bob 4s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.eyebrow{display:inline-block;background:var(--goldbg);color:var(--gold);border-radius:999px;padding:4px 14px;font-weight:800;font-size:14.5px;margin-bottom:12px}
+.lead{font-size:19px;color:var(--ink2)}
+.btn{display:inline-block;background:var(--lineg);color:#fff;text-decoration:none;font-weight:900;font-size:18px;border-radius:999px;padding:16px 28px;box-shadow:0 6px 18px rgba(6,199,85,.28);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.teal{background:var(--teal);box-shadow:0 6px 18px rgba(14,124,134,.25)}
+.btn.outline{background:#fff;color:var(--deep);border:2px solid var(--line);box-shadow:none}
+.btn.sm{font-size:16px;padding:11px 20px;box-shadow:none}
+.btnnote{text-wrap:balance;font-size:15.5px;color:var(--ink2);margin-top:8px}
+.scene{background:#fff;border:2px solid var(--line);border-radius:18px;padding:22px 24px;margin:18px 0}
+.scene .q{font-weight:800;color:var(--deep);font-size:19px}
+.checks{list-style:none;padding:0;margin:18px 0;display:grid;gap:10px}
+.checks li{padding-left:40px;position:relative;font-weight:700;color:var(--deep)}
+.checks li:before{content:"✓";position:absolute;left:0;top:2px;width:28px;height:28px;border-radius:50%;background:var(--teal);color:#fff;font-weight:900;display:grid;place-items:center;font-size:16px}
+.checks span{display:block;font-weight:500;color:var(--ink);font-size:17px}
+.tatoe{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:22px 0;align-items:stretch}
+.tatoe div{background:#fff;border-radius:16px;padding:18px;text-align:center;border:2px solid var(--line);min-width:0}
+.tatoe .ic{font-size:40px;line-height:1;margin-bottom:8px}
+.tatoe b{display:block;font-size:17px}
+.tatoe small{text-wrap:balance;display:block;color:var(--ink2);font-size:15px;line-height:1.6;margin-top:6px}
+.robo{display:flex;gap:14px;align-items:flex-start;margin:22px 0}
+.robo img{width:84px;flex:0 0 auto}
+.robo .bub{flex:1;min-width:0;background:#fff;border:2px solid var(--line);border-radius:18px;padding:14px 18px;position:relative;font-size:18px}
+.robo .bub:before{content:"";position:absolute;left:-12px;top:26px;border:7px solid transparent;border-right-color:var(--line)}
+.robo .bub .who{display:block;font-size:14.5px;color:var(--ink2);font-weight:700;margin-bottom:4px}
+.koe{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 18px}
+.koe span{background:#fff;border:2px solid var(--line);border-radius:999px;padding:6px 16px;font-weight:700;color:var(--deep);font-size:16.5px}
+.steps{counter-reset:s;display:grid;gap:28px;margin:20px 0}
+.step{display:grid;grid-template-columns:52px 1fr;gap:14px;align-items:start}
+.step:before{counter-increment:s;content:counter(s);width:52px;height:52px;border-radius:50%;background:var(--teal);color:#fff;font-weight:900;font-size:24px;display:grid;place-items:center}
+.step>div{min-width:0;border-left:3px solid var(--line);padding-left:16px}
+.step h3{margin-top:8px}
+.checker{background:#fff;border:3px solid var(--teal);border-radius:20px;padding:22px 22px;margin:14px 0}
+.checker label{display:block;font-weight:800;color:var(--deep);margin-bottom:8px}
+.upd{font-size:14.5px;color:var(--ink2);margin:0 0 10px}
+.inrow{display:flex;gap:10px;flex-wrap:wrap}
+.inrow input{flex:1 1 240px;min-width:0;font:inherit;font-size:19px;padding:14px 16px;border:2px solid var(--line);border-radius:12px}
+.inrow input:focus{outline:3px solid var(--goldfill);outline-offset:2px;border-color:var(--teal)}
+.inrow button{font:inherit;font-weight:900;font-size:18px;background:var(--teal);color:#fff;border:0;border-radius:12px;padding:14px 24px;cursor:pointer}
+.inrow button:disabled{opacity:.6;cursor:wait}
+.result{margin-top:18px;display:none;overflow-wrap:anywhere}
+.result .head{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+.tag{display:inline-block;border-radius:999px;padding:4px 14px;font-weight:900;font-size:15px}
+.tag.ok{background:var(--okbg);color:var(--ok)}.tag.ng{background:var(--ngbg);color:var(--ng)}.tag.gray{background:var(--graybg);color:var(--gray)}.tag.gold{background:var(--goldbg);color:var(--gold)}
+.result .host{font-size:22px;font-weight:900;color:var(--deep)}
+.result dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:12px 0;font-size:18px}
+.result dt{font-weight:800;color:var(--ink2);white-space:nowrap}.result dd{margin:0;min-width:0}
+.result .src{font-size:15px;color:var(--ink2)}
+.result .next{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.copybox{background:var(--soft);border-radius:14px;padding:16px 18px;position:relative;font-size:18px;white-space:pre-wrap;line-height:1.8}
+.copybtn{display:inline-block;margin-top:10px;font:inherit;font-weight:900;font-size:16px;background:var(--teal);color:#fff;border:0;border-radius:999px;padding:10px 20px;cursor:pointer}
+.copybtn.done{background:var(--ok)}
+.cta{background:var(--deep);color:#fff;padding:40px 22px;text-align:center;border-radius:22px}
+.cta h2{color:#fff}.cta p{color:#D9ECEE}.cta .btnnote{color:#E6F3F4;font-size:16px}
+.cta .btn{font-size:20px;padding:18px 34px}
+.price{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0}
+.price div{background:#fff;border:2px solid var(--line);border-radius:18px;padding:20px 22px;min-width:0}
+.price .big{font-size:34px;font-weight:900;color:var(--deep);line-height:1.2}
+.price .big small{font-size:16px;color:var(--ink2);font-weight:700}
+.faq details{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 18px;margin:10px 0}
+.faq summary{font-weight:800;color:var(--deep);cursor:pointer;font-size:17.5px}
+.faq details p{margin:10px 0 4px;font-size:18px}
+.jp{font-size:15px;color:var(--ink2)}
+footer{padding-block:36px;border-top:1px solid var(--line);font-size:15px;color:var(--ink2)}
+footer a{font-weight:700}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}.hero img{max-width:200px}.tatoe,.price{grid-template-columns:1fr}}
+@media (max-width:600px){.price .big{font-size:30px}.robo img{width:64px}.cta{padding:32px 14px}.cta .btn{font-size:17.5px;padding:16px 20px;white-space:nowrap}.step{grid-template-columns:40px 1fr;gap:10px}.step:before{width:40px;height:40px;font-size:18px}.step>div{padding-left:10px}.result dl{grid-template-columns:1fr;gap:2px 0}.result dt{margin-top:10px}.checker{padding:16px 14px}.inrow button{flex:1 1 100%}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero img{animation:none}.btn{transition:none}}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--goldfill);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap">
+  <a class="brand" href="https://fulfull-style.com/"><b>fulfull</b><span>ホームページの確かめ方</span></a>
+  <a class="mini" href="#line">LINEで聞く</a>
+</div></header>
+
+<main>
+
+<div class="hero"><div class="wrap">
+  <div>
+    <div class="eyebrow">2026年10月21日発表・ホームページの部品の不具合</div>
+    <h1>ニュースの件、<br>うちのホームページは？<br><em>3分の確かめ方</em></h1>
+    <p class="lead">置き場所の会社の多くは、10月22日までに直す作業を終えたと発表しています。<br>社長が確かめるのは、「古いバージョンを選んだままになっていないか」の1点です。<br>下にホームページの住所（www.〜）を入れると、多くの場合、置き場所の会社とその対応が分かります。</p>
+    <p><a class="btn teal" href="#check">住所を入れて確かめる</a></p>
+    <p class="btnnote">業者さんに送る質問文と、取引先に聞かれたときの一言も、下に置いてあります。</p>
+  </div>
+  <img src="../img/mascot_invite.webp" alt="" width="300" height="300">
+</div></div>
+
+<section><div class="narrow">
+  <div class="scene">
+    <p class="q">来週、取引先や銀行の担当者から「お宅のホームページ、大丈夫でした？」と聞かれるかもしれません。</p>
+    <p>「置き場所の会社の対応を確認しました。10月22日に終わっています」と一言で返せれば、話はそこで終わります。<br>このページは、その一言に必要な材料を集めるためのものです。</p>
+  </div>
+  <ul class="checks">
+    <li>うちの置き場所が直したかどうか分かる<span>置き場所の会社と、その会社の発表が分かります。</span></li>
+    <li>業者さんに送る文が、そのまま使える<span>コピーして送るだけです。</span></li>
+    <li>取引先に聞かれたときの一言が決まる<span>確認が済んだとき、まだのとき、2つの言い方を用意しました。</span></li>
+  </ul>
+</div></section>
+
+<section class="soft"><div class="narrow">
+  <h2>何が起きたのか。ビルにたとえると、こうです</h2>
+  <p>ホームページは、ビルに入っているテナントのお店のようなものです。<br>お店（ホームページ）は、ビルの共用設備（ホームページを動かしている部品「PHP」）の上で動いています。<br>10月21日の夜、その共用設備に不具合が見つかり、直したバージョン（版）が出ました。</p>
+  <div class="tatoe">
+    <div><div class="ic">🏢</div><b>共用設備＝PHP</b><small>ここに不具合。直すのは管理会社の仕事です</small></div>
+    <div><div class="ic">🔧</div><b>管理会社＝置き場所の会社</b><small>エックスサーバー、さくら、ロリポップ など。多くは10月22日までに作業を終えています</small></div>
+    <div><div class="ic">🏬</div><b>お店＝ホームページ</b><small>社長が見るのは、古い設備のままになっていないか、です</small></div>
+  </div>
+  <div class="robo"><img src="../img/mascot_think.webp" alt="" width="84" height="84"><div class="bub">ホームページの作成ソフト（WordPress）や追加機能（プラグイン）を最新にしても、この部品は変わりません。<br>レンタルサーバーなら、直すのは置き場所の会社の仕事です。<br>慌てて触る必要はなく、確かめるだけで足ります。</div></div>
+  <p class="note">国も注意を呼びかけている話ですが、社長の確認は小さなものです。<br>8.1以前の古いバージョンは公式の直した版が出ていません。置き場所の会社が独自に直している場合が多いですが、新しいバージョンへの切り替えがすすめられています。<br>自社サーバーやクラウドに置いている会社は、業者さんかIT担当の方に聞いてください。</p>
+</div></section>
+
+<section><div class="narrow">
+  <h2>つまずきやすいのは、この3つ</h2>
+  <div class="koe"><span>「誰に聞けばいいのか分からない」</span><span>「業者さんと連絡がつかない」</span><span>「管理画面を見たことがない」</span></div>
+  <p>どれも、よくあることです。<br>置き場所の会社が分かれば、次に聞く相手が決まります。</p>
+</div></section>
+
+<section class="soft" id="check"><div class="narrow">
+  <h2>3分で終わる、確かめる順番</h2>
+  <p>手順は3つ。1つ目だけでも、状況は分かります。</p>
+  <div class="steps">
+    <div class="step"><div>
+      <h3>ホームページの住所を入れて、置き場所の会社を知る</h3>
+      <div class="checker">
+        <p class="upd">各社の発表は 2026年10月23日 19時時点。最新の状況は、結果に出る公式のお知らせでご確認ください。</p>
+        <label for="dom">会社のホームページの住所（例：www.fulfull.jp）</label>
+        <div class="inrow"><input id="dom" type="text" inputmode="url" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="go" placeholder="www.〇〇.co.jp"><button id="go" type="button">確かめる</button></div>
+        <p class="note" style="margin:8px 0 0">調べるときは、入れた住所だけをGoogleの公開DNS（dns.google）に問い合わせます。fulfullには届かず、保存もしません。会社のホームページの中には入りません。</p>
+        <div class="result" id="res" aria-live="polite">
+          <div class="head"><span class="tag" id="rtag"></span><span class="host" id="rhost"></span></div>
+          <dl>
+            <dt>今の状況</dt><dd id="rstat"></dd>
+            <dt>社長がやること</dt><dd id="rtodo"></dd>
+            <dt>バージョンを見る場所</dt><dd id="rpanel"></dd>
+          </dl>
+          <p class="src" id="rsrc"></p>
+          <div class="next"><a class="btn teal sm" href="#q3">業者さんに送る文へ</a><a class="btn sm" href="#line">LINEで住所を送る</a></div>
+        </div>
+      </div>
+      <p class="note">結果が「推測」や「分からない」のときは、置き場所の会社からの請求メールや、業者さんの見積書に会社名が書いてあります。</p>
+    </div></div>
+    <div class="step"><div>
+      <h3>管理画面に入れる人は、部品のバージョンを見る</h3>
+      <p>WordPressなら、管理画面の「ツール」→「サイトヘルス」→「情報」→「サーバー」に「PHPバージョン」があります。</p>
+      <p><b>8.2系なら 8.2.35 以上、8.3系なら 8.3.36 以上、8.4系なら 8.4.27 以上、8.5系なら 8.5.12 以上</b>が、直したバージョンです。<br>番号が古く見えても、置き場所の会社が番号を変えずに中で直していることがあります（ConoHa・お名前.com・mixhost など）。その場合は、1の結果を優先してください。</p>
+      <p><b>8.1以下</b>のときは、切り替えがすすめられています。表示が崩れることがあるので、控え（バックアップ）を取ったうえで、業者さんかLINEにご相談ください。</p>
+      <p class="note">管理画面を見たことがない方は、ここは飛ばして3へ。</p>
+    </div></div>
+    <div class="step"><div>
+      <h3>作ってくれた業者さんに、この文をそのまま送る</h3>
+      <div class="copybox" id="q3">〇〇様
+
+いつもお世話になっております。
+ニュースで見たホームページの不具合の件（PHPの不具合 CVE-2026-109618／109619。10月21日に修正版が出たもの）で、3点だけ教えてください。
+
+1. うちのホームページを動かしている部品（PHP）について、この不具合への対応は終わっていますか。終わっていれば、その日付を教えてください。
+2. うちのホームページの置き場所（サーバー）はどこの会社のものですか。確認された方法（お知らせのURLなど）も教えてください。
+3. まだの場合は、いつ頃、どなたが対応できるか教えてください。費用がかかる場合は、先に金額を教えてください。作業中にホームページが止まる時間があれば、それもお願いします。
+
+お忙しいところ恐れ入りますが、よろしくお願いいたします。
+
+（会社名・お名前）</div>
+      <button class="copybtn" type="button" data-copy="q3">この文をコピーする</button>
+      <p class="note" style="margin-top:10px">「終わっています」と日付が返ってくれば、確認はそれで終わりです。取引先にもそのまま言えます。<br>まだのときは、LINEで住所を送ってください。</p>
+    </div></div>
+  </div>
+
+  <h3 style="margin-top:36px">取引先やお客さまに聞かれたら、こう答える</h3>
+  <p class="note">確認が済んだ場合と、まだの場合の2つです。日付は、置き場所の会社や業者さんの返事に合わせて入れ替えてください。</p>
+  <div class="copybox" id="a1">ご心配をおかけしました。うちのホームページの置き場所の会社が対応を済ませたことを確認しています（10月22日完了）。引き続き、通常どおりご覧いただけます。</div>
+  <button class="copybtn" type="button" data-copy="a1">確認が済んだ場合の文をコピー</button>
+  <div class="copybox" id="a2" style="margin-top:14px">ご心配をおかけしています。うちのホームページの置き場所の会社に、対応の状況を確認しているところです。分かりしだいお知らせします。</div>
+  <button class="copybtn" type="button" data-copy="a2">確認中の場合の文をコピー</button>
+</div></section>
+
+<section id="line"><div class="narrow">
+  <h2>業者さんがいなくても、住所を送れば次の一手が分かります</h2>
+  <p>ホームページの住所だけ、LINEで送ってください。<br>インターネットに公開されている情報から、置き場所の会社と、部品のバージョンが分かるかを調べて、メモでお返しします。<br>分かるのは外から見える範囲までです。そのうえで、次に聞く相手をお伝えします。<br>ご自分の会社のホームページに限ります。</p>
+  <div class="robo"><img src="../img/mascot_point.webp" alt="" width="84" height="84"><div class="bub"><span class="who">fulfull 森川より</span>僕の会社のホームページも、古い部品（8.0）のままでした。<br>控えを取って 8.3 に替え、使っていない古いサイトは閉じました。<br>同じことを、僕も今週やっています。</div></div>
+  <div class="cta">
+    <h2>住所を送ると、外から見えた範囲のメモが届きます</h2>
+    <p>無料です。お返しはメモだけで、商品のご案内は入れません。</p>
+    <p><a class="btn" href="https://line.me/R/oaMessage/@260picvu/?%E7%A2%BA%E8%AA%8D">LINEを開いて「確認」を送る</a></p>
+    <p class="btnnote">開くと「確認」の文字が入っています。そのまま送信ボタンを押してください。<br>続けて、会社のホームページの住所を送ってください（www.〇〇.co.jp など）。</p>
+  </div>
+</div></section>
+
+<section class="faq soft"><div class="narrow">
+  <h2>よくある質問</h2>
+  <details><summary>Wix・Jimdo・BASE・カラーミー・STUDIO で作ったホームページは？</summary><p>その会社が置き場所も部品も管理しています。部品を触る作業はありません。お知らせが出ていれば、読めば十分です。</p></details>
+  <details><summary>WordPressを最新にすれば直りますか？</summary><p>WordPressを最新にしても、この不具合は変わりません。不具合は、WordPressの下で動く部品（PHP）の中にあるためです。レンタルサーバーなら、直すのは置き場所の会社です。</p></details>
+  <details><summary>置き場所の会社が「対応済み」なら、もう何もしなくていい？</summary><p>多くの会社は、それで確認は完了です。1つだけ、「古いバージョン（8.1以前）を選んだまま」になっていないかを見てください。古いバージョンは、公式の直した版が出ていません。</p></details>
+  <details><summary>切り替えて表示が崩れたら？</summary><p>古いテーマやプラグインが、新しいバージョンで動かないことがあります。元のバージョンに戻すと、多くの場合、表示は戻ります。ただし、戻したバージョンは直っていないことがあるので、その日のうちに業者さんかLINEへご相談ください。</p></details>
+  <details><summary>この確認で「安全」になりますか？</summary><p>この確認で分かるのは、置き場所の会社と、その会社の今の対応までです。中の設定やパスワードの管理は見ていないため、「安全」とお伝えすることはできません。それでも、次に聞く相手は決まります。</p></details>
+  <details><summary>費用はかかりますか？</summary><p>このページと、LINEでのメモは無料です。管理画面を一緒に見る（Zoom 30分）は 5,500円（税込）です。それ以上の作業は、先に金額をお伝えしてから進めます。</p></details>
+</div></section>
+
+<section><div class="narrow">
+  <h2>古いホームページは、作り直す手もあります</h2>
+  <p>「作った業者さんがもういない」「10年前のまま」という会社には、作り直しも1つの手です。<br>fulfullが作るホームページは、できあがった画面をそのまま置く作りで、PHPを使いません。<br>そのため今回の件の対象外で、同じ種類の更新作業もありません。</p>
+  <div class="price">
+    <div><div class="big">29,800<small>円（税込・1回）</small></div><p>今の内容のまま、スマホで開いて、そのまま問い合わせできるホームページに作り直します。<br>先に見本をお見せし、気に入ったら進めます。</p></div>
+    <div><div class="big">月 4,980<small>円（税込・任意）</small></div><p>文章や写真の差し替えは、LINEで送るだけです。<br>置き場所やドメインの会社から届くお知らせの読み解きと対応、年1回の点検も含みます。</p></div>
+  </div>
+  <p><a class="btn outline" href="https://fulfull-style.com/">くわしく見る（見本と料金）</a></p>
+  <p class="note">無理にはおすすめしません。今のホームページで足りている会社は、上の3つの手順で終わりです。<br>どんな作りでも、ホームページの住所（ドメイン）の更新と、置き場所のパスワード管理は大切です。</p>
+</div></section>
+
+</main>
+
+<footer><div class="narrow">
+  <p>書いた人：森川満章（fulfull株式会社・横浜市青葉区）。お金の相談と会社のAI活用を仕事にしています。このページは売り物ではなく、僕のホームページも同じ道を通りました。</p>
+  <p><a href="https://fulfull-style.com/">ホームページ制作</a>／<a href="https://fulfull-style.com/privacy/">プライバシーポリシー</a>。入力されたホームページの住所は、Googleの公開DNSへの問い合わせにだけ使い、fulfullには届きません。</p>
+  <p class="jp">各社の対応状況は、2026年10月23日19時時点の各社の発表と公開情報をもとにしています。<br>出典：<a href="https://www.xserver.ne.jp/news_detail.php?view_id=19734">エックスサーバー お知らせ</a>／<a href="https://lolipop.jp/info/">ロリポップ！ お知らせ</a>／<a href="https://www.sakura.ad.jp/">さくらインターネット 公式サイト</a>／<a href="https://www.php.net/supported-versions.php">php.net</a>／<a href="https://www.ipa.go.jp/">IPA</a></p>
+</div></footer>
+
+<script>
+// 置き場所の判定表（2026-10-23 19時時点の各社発表をもとに手で管理）。tag: ok=対応を発表 / gold=要確認 / gray=推測・不明 / out=対象外
+const HOSTS=[
+ {id:'xserver',re:/\.(xserver\.jp|xsrv\.jp|xbiz\.jp)\.?$/i,name:'エックスサーバー',tag:'ok',stat:'10月22日までに、直す作業を終えたと発表されています（8.2〜8.5は公式の修正版、7.4〜8.1は独自の修正）。',todo:'8.2以上なら作業はいりません。8.1以下を選んでいる場合は、控えを取ってから 8.3 か 8.4 への切り替えがすすめられています。バージョンが分からないときは、手順2か、業者さんへの質問文をお使いください。',panel:'サーバーパネル →「PHP Ver.切替」→ ドメインの右の編集。',src:'https://www.xserver.ne.jp/news_detail.php?view_id=19734',srcname:'公式のお知らせ'},
+ {id:'shin',re:/\.(wpx\.ne\.jp|shin-server\.jp|xtrem\.jp)\.?$/i,name:'シン・レンタルサーバー／wpX',tag:'gold',stat:'エックスサーバーと同じ告知が出ていますが、個別の完了発表は確認できていません。',todo:'管理画面のお知らせを確認してください。8.1以下を選んでいる場合は 8.3 以上への切り替えがすすめられています。',panel:'サーバーパネル →「PHP Ver.切替」。',src:'https://www.xserver.ne.jp/news_detail.php?view_id=19734',srcname:'エックスサーバーのお知らせ'},
+ {id:'sakura',re:/\.sakura\.ne\.jp\.?$/i,name:'さくらのレンタルサーバ',tag:'ok',stat:'提供中の全部のバージョンに修正を入れ、緊急メンテナンスは10月23日17:30にすべて終了したと発表されています。',todo:'原則、作業はいりません。古いバージョンを使っている場合は、最新のバージョン（8.3など）への移行がすすめられています。',panel:'コントロールパネル →「スクリプト設定」→「言語のバージョン設定」。',src:'https://www.sakura.ad.jp/',srcname:'公式サイト'},
+ {id:'lolipop',re:/\.(lolipop\.jp|lolipop\.io|madame\.jp|heteml\.jp|heteml\.net|pepabo\.com|muumuu-domain\.com)\.?$/i,name:'ロリポップ！／ヘテムル（GMOペパボ）',tag:'ok',stat:'ロリポップ！は10月22日16:57にメンテナンス完了と発表（8.2〜8.5は公式の修正版、7.4〜8.1と5.3〜7.3は独自の修正）。ヘテムルは同じ会社の告知をご確認ください。',todo:'8.1以下は応急対応のため、8.2以上への切り替えがすすめられています。アップロードの進み具合を表示する機能を使うサイトは動作確認を。',panel:'ユーザー専用ページ →「サーバーの管理・設定」→「PHP設定」。',src:'https://lolipop.jp/info/',srcname:'公式のお知らせ'},
+ {id:'conoha',re:/\.(conoha\.io|conoha\.ne\.jp|conoha\.jp)\.?$/i,name:'ConoHa WING',tag:'gold',stat:'今のバージョンのまま、ConoHa側で修正を順次当てていると発表（10月22日）。番号は変わりません。',todo:'バージョンの変更はいりません。完了の続報を公式のお知らせで確認してください。',panel:'サイト管理 →「サイト設定」→「応用設定」→「PHPバージョン」。',src:'https://www.conoha.jp/',srcname:'公式サイト'},
+ {id:'onamae',re:/\.(gmoserver\.jp|onamae\.com|onamae-server\.com)\.?$/i,name:'お名前.com レンタルサーバー',tag:'ok',stat:'バージョンの番号を変えずに修正を当てたと案内されています（10月22日）。',todo:'原則、利用者の作業はいりません。5系・7系の古いバージョンは変更が必要な場合があります。',panel:'コントロールパネル →「高度な設定」→「PHP」。',src:'https://www.onamae.com/news/',srcname:'公式のお知らせ一覧'},
+ {id:'mixhost',re:/\.mixhost\.jp\.?$/i,name:'mixhost',tag:'ok',stat:'10月22日10:18ごろまでにPHP 5.2〜8.5の修正を完了（番号は維持）と発表。',todo:'原則、作業はいりません。古いバージョンは新しいバージョンへの切り替えがすすめられています。',panel:'cPanel →「MultiPHP マネージャー」。',src:'https://mixhost.jp/',srcname:'公式サイト'},
+ {id:'cbox',re:/\.(cbox\.jp|colorfulbox\.jp)\.?$/i,name:'カラフルボックス',tag:'ok',stat:'10月22日7:35に全対象サーバーの更新完了と発表（7.4〜8.1にも修正・保護措置）。',todo:'原則、作業はいりません。',panel:'cPanel →「MultiPHP マネージャー」。',src:'https://www.colorfulbox.jp/',srcname:'公式サイト'},
+ {id:'kagoya',re:/\.(kagoya\.net|kagoya\.jp)\.?$/i,name:'KAGOYA（カゴヤ）',tag:'gold',stat:'レンタルサーバープランは10月22日中に更新完了。専用・マネージドプランは10月23日時点で方針を調整中と発表。',todo:'どのプランかを確認し、調整中のプランなら公式の案内に従ってください。',panel:'コントロールパネル →「PHP設定」。',src:'https://www.kagoya.jp/',srcname:'公式サイト'},
+ {id:'zenlogic',re:/\.(zenlogic\.jp|firstserver\.ne\.jp|idcfcloud\.net)\.?$/i,name:'Zenlogic（IDCフロンティア）',tag:'gold',stat:'10月21日22時〜22日18時に作業。古いPHP 5.3は最新版へ強制的に更新されました。',todo:'表示が崩れていないかを見てください。崩れていれば業者さんに相談を。',panel:'カスタマーポータル →「コントロールパネル」→「WEB」→「PHP設定」。',src:'https://zenlogic.jp/',srcname:'公式サイト'},
+ {id:'cpi',re:/\.(cpi\.ad\.jp|secure\.ne\.jp)\.?$/i,name:'CPI（KDDIウェブ）',tag:'gray',stat:'10月23日19時時点で、公式のお知らせを確認できていません（未対応という意味ではありません）。',todo:'公式のお知らせを見るか、業者さんに質問文を送ってください。',panel:'コントロールパネル →「PHP設定」。',src:'https://www.cpi.ad.jp/',srcname:'公式サイト'},
+ {id:'core',re:/\.(coreserver\.jp|value-domain\.com|xrea\.com)\.?$/i,name:'コアサーバー／XREA（GMO）',tag:'gray',stat:'10月23日19時時点で、公式のお知らせを確認できていません（未対応という意味ではありません）。',todo:'公式のお知らせを見るか、業者さんに質問文を送ってください。',panel:'コントロールパネル →「サイト設定」→「PHPバージョン」。',src:'https://www.coreserver.jp/',srcname:'公式サイト'},
+ {id:'star',re:/\.(star\.ne\.jp|netowl\.jp)\.?$/i,name:'スターサーバー（ネットオウル）',tag:'gray',stat:'10月23日19時時点で、公式のお知らせを確認できていません（未対応という意味ではありません）。',todo:'公式のお知らせを見るか、業者さんに質問文を送ってください。',panel:'サーバー管理ツール →「PHPバージョン設定」。',src:'https://www.star.ne.jp/',srcname:'公式サイト'},
+ {id:'wadax',re:/\.wadax\.ne\.jp\.?$/i,name:'WADAX',tag:'gray',stat:'10月23日19時時点で、公式のお知らせを確認できていません（未対応という意味ではありません）。',todo:'公式のお知らせを見るか、業者さんに質問文を送ってください。',panel:'コントロールパネル。',src:'https://www.wadax.ne.jp/',srcname:'公式サイト'},
+ {id:'alpha',re:/\.(alpha-web\.jp|alpha-prm\.jp|alpha-mail\.jp)\.?$/i,name:'大塚商会 αWeb',tag:'gray',stat:'10月23日19時時点で、公式のお知らせを確認できていません（未対応という意味ではありません）。',todo:'大塚商会の担当者に、質問文をそのまま送ってください。',panel:'担当者に確認。',src:'https://www.otsuka-shokai.co.jp/',srcname:'公式サイト'},
+ {id:'github',re:/\.github\.(io|com)\.?$/i,ip:/^185\.199\.(108|109|110|111)\.153$/,name:'GitHub Pages（PHPを使わないホームページ）',tag:'out',stat:'この置き場所はPHPを使いません。今回の件の対象外です。',todo:'部品を触る作業はありません。',panel:'なし。',src:'',srcname:''},
+ {id:'google',re:/(ghs\.googlehosted\.com|blogspot|\.googlehosted\.com)\.?$/i,name:'Googleサイト／Blogger（運営会社が管理）',tag:'out',stat:'Googleが置き場所も部品も管理しています。',todo:'部品を触る作業はありません。',panel:'なし。',src:'',srcname:''},
+ {id:'wix',re:/\.(wixdns\.net|wixsite\.com|wix\.com)\.?$/i,name:'Wix（運営会社が管理）',tag:'out',stat:'Wixが置き場所も部品も管理しています。',todo:'部品を触る作業はありません。',panel:'なし。',src:'',srcname:''},
+ {id:'jimdo',re:/\.(jimdo\.com|jimdofree\.com|jimdosite\.com)\.?$/i,name:'Jimdo（運営会社が管理）',tag:'out',stat:'Jimdoが置き場所も部品も管理しています。',todo:'部品を触る作業はありません。',panel:'なし。',src:'',srcname:''},
+ {id:'studio',re:/\.(studio\.design|studio\.site)\.?$/i,name:'STUDIO（運営会社が管理）',tag:'out',stat:'STUDIOが置き場所も部品も管理しています。',todo:'部品を触る作業はありません。',panel:'なし。',src:'',srcname:''},
+ {id:'goope',re:/\.(goope\.jp|amebaownd\.com|amebaownd\.jp)\.?$/i,name:'グーペ／Ameba Ownd（運営会社が管理）',tag:'out',stat:'運営会社が置き場所も部品も管理しています。お知らせが出ていれば読めば十分です。',todo:'部品を触る作業はありません。',panel:'なし。',src:'',srcname:''},
+ {id:'shop',re:/\.(shop-pro\.jp|thebase\.in|base\.shop|base\.ec|myshopify\.com|shopify\.com|stores\.jp|makeshop\.jp)\.?$/i,name:'ネットショップのサービス（BASE・カラーミー・Shopify など）',tag:'out',stat:'運営会社が置き場所も部品も管理しています。一時停止したサービスもありましたが、再開しています。',todo:'お知らせを読めば十分です。',panel:'なし。',src:'',srcname:''},
+ {id:'cloudflare',re:/\.(cloudflare\.net|cloudflare\.com|cloudflare-dns\.com)\.?$/i,ip:/^(104\.(1[6-9]|2[0-9]|3[01])\.|172\.(6[4-9]|7[01])\.|162\.15[89]\.|188\.114\.|198\.41\.|141\.101\.|173\.245\.|103\.2[12]\.|103\.31\.|190\.93\.|197\.234\.)/,name:'Cloudflareを通しているホームページ',tag:'gray',stat:'Cloudflare（門番のサービス）を通しているため、置き場所の会社が外からは分からない形です。',todo:'業者さんに質問文を送ってください。',panel:'業者さんに確認。',src:'',srcname:''},
+ {id:'cloud',re:/(compute\.amazonaws\.com|cloudfront\.net|awsdns|bc\.googleusercontent\.com|cloudapp\.azure\.com|azurewebsites\.net|linodeusercontent\.com|vultrusercontent\.com|digitalocean\.com|sakura-cloud|is1[ab]\.sakurastorage)\.?/i,name:'クラウド（AWS・Google など）',tag:'gray',stat:'会社ごとに置き方が違うため、外からは対応状況が分かりません。',todo:'担当の業者さんかIT担当の方に、質問文を送ってください。',panel:'担当者に確認。',src:'',srcname:''},
+];
+const UNKNOWN={name:'置き場所の会社が外からは分かりません',tag:'gray',stat:'業者さん独自のサーバーなどに置かれていると、外から会社名が分からないことがあります。',todo:'作ってくれた業者さんに、下の質問文をそのまま送ってください。業者さんがいない場合は、LINEで住所を送ってください。',panel:'業者さんに確認。',src:'',srcname:''};
+const TAGTXT={ok:'置き場所の会社が対応を発表',gold:'要確認',gray:'外からは分からない',out:'今回の対象外',guess:'推測（管理先から）'};
+function host(s){s=(s||'').normalize('NFKC').trim().replace(/[。｡]/g,'.');if(s.includes('@'))s=s.split('@').pop();if(!/^[a-z]+:\/\//i.test(s))s='http://'+s;try{return new URL(s).hostname.replace(/\.$/,'').toLowerCase();}catch(e){return '';}}
+function parent(h){const p=h.split('.');return p.length>2?p.slice(1).join('.'):h;}
+async function doh(name,type){const r=await fetch('https://dns.google/resolve?name='+encodeURIComponent(name)+'&type='+type,{cache:'no-store',signal:AbortSignal.timeout(6000)});if(!r.ok)throw new Error('dns');return r.json();}
+async function check(h){
+  let err=0;const q=async(n,t)=>{try{return await doh(n,t);}catch(e){err++;return {};}};
+  const strong=[],weak=[];let ip='';
+  let a=await q(h,'A');(a.Answer||[]).forEach(x=>{if(x.type===5)strong.push(x.data);if(x.type===1&&!ip)ip=x.data;});
+  if(!ip&&!h.startsWith('www.')){a=await q('www.'+h,'A');(a.Answer||[]).forEach(x=>{if(x.type===5)strong.push(x.data);if(x.type===1&&!ip)ip=x.data;});}
+  if(ip){const rev=ip.split('.').reverse().join('.')+'.in-addr.arpa';const p=await q(rev,'PTR');(p.Answer||[]).forEach(x=>strong.push(x.data));}
+  let n=await q(h,'NS');if(!(n.Answer||[]).length)n=await q(parent(h),'NS');(n.Answer||[]).forEach(x=>weak.push(x.data));
+  if(err&&!ip&&!strong.length&&!weak.length)throw new Error('net');
+  // 入力したドメイン名そのものは手がかりから除く（CNAMEや自前NSに自社名が入るため）
+  const base=h.replace(/^www\./,'');const strip=s=>s.toLowerCase().split(base).join('');
+  const st=strong.map(strip),wk=weak.map(strip);
+  let hit=null,by='';
+  for(const x of HOSTS){if(x.ip&&ip&&x.ip.test(ip)){hit=x;by='ip';break;}}
+  if(!hit){for(const x of HOSTS){if(st.some(c=>x.re.test(c))){hit=x;by='name';break;}}}
+  if(!hit){for(const x of HOSTS){if(!x.ip&&wk.some(c=>x.re.test(c))){hit=x;by='ns';break;}}}
+  return {hit:hit||UNKNOWN,by,ip,found:!!ip||strong.length>0||weak.length>0};
+}
+const $=id=>document.getElementById(id);
+function show(tagClass,tagText,name,stat,todo,panel,srcText,srcHref,srcName){
+  const res=$('res');res.style.display='block';
+  const tag=$('rtag');tag.className='tag '+tagClass;tag.textContent=tagText;
+  $('rhost').textContent=name;$('rstat').textContent=stat;$('rtodo').textContent=todo;$('rpanel').textContent=panel;
+  const s=$('rsrc');s.textContent='';s.appendChild(document.createTextNode(srcText));
+  if(srcHref){s.appendChild(document.createTextNode(' '));const a=document.createElement('a');a.href=srcHref;a.target='_blank';a.rel='noopener';a.textContent=srcName||'公式サイト';s.appendChild(a);}
+}
+$('go').addEventListener('click',async()=>{
+  const h=host($('dom').value);
+  if(!h||!h.includes('.')){show('gray','入力を確かめてください','','例：www.〇〇.co.jp の形で入れてください。','','','',null);$('dom').focus();return;}
+  $('go').disabled=true;$('go').textContent='確かめています…';$('res').style.display='block';$('rtag').className='tag gray';$('rtag').textContent='確かめています…';$('rhost').textContent='';
+  const fixed='10月23日19時時点の各社の発表と、外から見える手がかりからの推測です。中の設定までは見ていません。';
+  try{
+    const r=await check(h);const x=r.hit;
+    if(!r.found){show('gray','見つかりませんでした','',"住所「"+h+"」は見つかりませんでした。綴りを確かめてください。",'','','',null);}
+    else if(r.by==='ns'&&x!==UNKNOWN){show('gray',TAGTXT.guess,x.name+'（管理先から推測）','ホームページの住所の管理先が'+x.name+'なので、置き場所も同じ会社の可能性があります。ただし置き場所は別の会社のこともあります。','置き場所がこの会社だと分かっている場合：'+x.todo+' 分からない場合は、業者さんに質問文を送ってください。',x.panel,fixed,x.src,x.srcname);}
+    else{show(x.tag,TAGTXT[x.tag],x.name,x.stat,x.todo,x.panel,fixed,x.src,x.srcname);}
+    $('res').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'nearest'});
+  }catch(e){show('gray','調べられませんでした','','通信の都合で調べられませんでした。少し待ってからもう一度押すか、LINEで住所を送ってください。','','','',null);}
+  $('go').disabled=false;$('go').textContent='確かめる';
+});
+$('dom').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.isComposing&&e.keyCode!==229){e.preventDefault();$('go').click();}});
+document.querySelectorAll('.copybtn').forEach(b=>b.addEventListener('click',async()=>{
+  const label=b.textContent;const t=$(b.dataset.copy).textContent;let ok=false;
+  try{await navigator.clipboard.writeText(t);ok=true;}catch(e){const r=document.createRange();r.selectNodeContents($(b.dataset.copy));const s=getSelection();s.removeAllRanges();s.addRange(r);try{ok=document.execCommand('copy');}catch(_){}}
+  b.textContent=ok?'コピーしました':'長押しで選んでコピーしてください';b.classList.toggle('done',ok);setTimeout(()=>{b.textContent=label;b.classList.remove('done');},2500);
+}));
+</script>
+</body>
+</html>
