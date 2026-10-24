@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light">
 <title>ニュースの件、うちのホームページは？｜3分の確かめ方｜fulfull</title>
-<meta name="description" content="10月21日に見つかったホームページの部品（PHP）の弱点。置き場所の会社（サーバー会社）の多くは直し終えたと発表しています。アドレスを入れると、サーバー会社の発表と社長がやることが分かります。業者さんに送る1通、取引先への一言つき。無料・売り込みなし。">
+<meta name="description" content="10月21日に見つかったホームページの部品（PHP）の弱点。置き場所の会社（サーバー会社）の多くは直し終えたと発表しています。アドレスを入れると、サーバー会社の発表と社長がやることが分かります。業者さんに送る1通、取引先への一言つき。">
 <link rel="canonical" href="https://fulfull-style.com/check/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231E2538'/%3E%3Cpath d='M9 17l5 5 9-11' fill='none' stroke='%23D6B15B' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="fulfull">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:title" content="ニュースの件、うちのホームページは？｜3分の確かめ方">
-<meta property="og:description" content="慌てて自分で触らなくて大丈夫。アドレスを入れると、サーバー会社の発表と社長がやることが分かります。無料・売り込みなし。">
+<meta property="og:description" content="慌てて自分で触らなくて大丈夫。アドレスを入れると、サーバー会社の発表と、外から見える部品の番号、社長がやることが分かります。">
 <meta property="og:url" content="https://fulfull-style.com/check/">
 <meta property="og:image" content="https://fulfull-style.com/check/og.png">
 <meta property="og:image:width" content="1200">
@@ -229,24 +229,23 @@ section.dark a:focus-visible,.cta a:focus-visible,footer a:focus-visible{outline
     <h1>ニュースの件、<br>うちのホームページは？</h1>
     <p class="lead">10月21日、ホームページを動かす部品（PHP）に弱いところが見つかりました。<br>慌てて自分で触らなくて大丈夫です。<br>ホームページの置き場所の会社（サーバー会社）の多くは、<b><span class="nw">10月22〜23日</span>に直し終えた</b>と発表しています。</p>
     <p class="scope">WordPressなどで作ったホームページの話です。Wix・BASEなどは作業はありません。</p>
-    <ul class="promise"><li>無料</li><li>売り込みなし</li><li>fulfullは入れた文字を保存しません</li></ul>
   </div>
 
   <div class="tool" id="check">
     <h2>3分の確かめ方</h2>
-    <p class="sub">アドレスを入れると、サーバー会社の発表と、社長がやることが出ます。</p>
+    <p class="sub">アドレスを入れると、サーバー会社の発表と、外から見える部品の番号、社長がやることが出ます。</p>
     <label for="dom">ホームページのアドレス</label>
     <input id="dom" type="text" inputmode="url" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="go" placeholder="例：www.〇〇.co.jp" aria-describedby="domhint">
     <p class="hint" id="domhint">名刺の www〜 か、会社のメールアドレスの @ から後ろでも大丈夫です。</p>
-    <button class="btn" id="go" type="button">確かめる（無料）</button>
-    <p class="okline">無料・売り込みなし・保存しません</p>
-    <p class="privacy">入れたアドレスはfulfullに届かず、保存もしません（<a href="#faq-addr">くわしく</a>）。</p>
+    <button class="btn" id="go" type="button">確かめる</button>
+    <p class="privacy">入れたアドレスは、そのホームページの表紙を1回読むためだけに使い、保存しません（<a href="#faq-addr">くわしく</a>）。</p>
     <p class="sr" role="status" id="rstatus"></p>
 
     <div class="res sample" id="res">
       <p class="sampnote" id="sampnote">下は結果の見本です。アドレスを入れると、あなたの結果に変わります。</p>
       <div class="head"><span class="tag sample" id="rtag">見本</span><span class="name" id="rname">（例）エックスサーバー</span></div>
       <div class="todo"><span class="k">社長がやること</span><span class="v" id="rtodo">今はなし。念のため業者さんに1通送り、終わった日付をもらっておきましょう。</span></div>
+      <dl id="rseen" hidden><dt>外から見えたこと</dt><dd id="rseenv"></dd></dl>
       <dl id="rdl" hidden><dt>サーバー会社の発表</dt><dd id="rstat"></dd></dl>
       <div class="answer" id="rans" hidden>
         <div class="k">取引先に聞かれたら、この一言で</div>
@@ -305,7 +304,7 @@ section.dark a:focus-visible,.cta a:focus-visible,footer a:focus-visible{outline
 
   <div class="cta">
     <h3>アドレスを送ると、メモが届きます</h3>
-    <p>無料です。お返しはメモだけで、商品のご案内は入れません。</p>
+    <p>お返しはメモです（無料）。</p>
     <a class="btn line" href="https://line.me/R/oaMessage/@260picvu/?%E7%A2%BA%E8%AA%8D">LINEを開いて「確認」を送る</a>
     <p class="how">開くと「確認」の文字が入っています。そのまま送信ボタンを押してください。<br>続けて、ホームページのアドレスを送ってください。</p>
     <p class="mail">LINEが苦手な方は、メールでも受け付けます。<br><a id="mailto" href="#line">info＠fulfull-style.com</a>（件名に「確認」、本文にアドレス）</p>
@@ -388,18 +387,18 @@ section.dark a:focus-visible,.cta a:focus-visible,footer a:focus-visible{outline
   </details>
   <details id="faq-addr">
     <summary><span class="q">入れたアドレスはどうなりますか？</span></summary>
-    <div class="in"><p>置き場所の会社を調べるために、Googleが無料で公開している「インターネットの住所録」（公開DNS・dns.google）に問い合わせるときにだけ使います。fulfullには届かず、fulfullは保存しません。Googleは仕組みの上で一時的に記録することがあります。</p></div>
+    <div class="in"><p>2つのことに使います。①置き場所の会社を調べるために、Googleが公開している「インターネットの住所録」（公開DNS・dns.google）に問い合わせます。②部品の番号を見るために、fulfullが用意した仕組み（Googleのサーバー上で動く小さなプログラム）から、そのホームページの表紙を1回だけ読みます。WordPressで版が隠れているときは、更新情報のページをもう1回読みます。どちらも、入れたアドレスも結果も保存・記録しません。Googleは仕組みの上で一時的に記録することがあります。</p></div>
   </details>
   <details>
     <summary><span class="q">費用はかかりますか？</span></summary>
-    <div class="in"><p>このページも、LINE・メールでのメモも無料です。こちらから有料のサービスをおすすめすることはありません。</p></div>
+    <div class="in"><p>このページも、LINE・メールでのメモも無料です。</p></div>
   </details>
 </div></div></div></section>
 
 </main>
 
 <footer><div class="wrap"><div class="text">
-  <p><b>書いた人：森川満章</b>（fulfull株式会社）<br>このページは売り物ではありません。僕のホームページも同じ道を通りました。</p>
+  <p><b>書いた人：森川満章</b>（fulfull株式会社）<br>僕のホームページも同じ道を通りました。</p>
   <p>この騒ぎのしくみと、fulfullが自分のホームページでやったことは、会社のサイトに記事としてまとめています。<br><a href="https://fulfull.jp/2026/10/24/php-update-report-2026-10/?ref=check">「PHPの弱点」ニュースを受けて、fulfullが2日でやったこと（fulfull.jp）→</a></p>
   <p>各社の対応は、2026年10月24日時点で確認できた発表と、外から見える手がかりから「たぶんこう」と見たものです。最新の状況は、各社のお知らせをご覧ください。</p>
   <ul>
@@ -416,16 +415,16 @@ section.dark a:focus-visible,.cta a:focus-visible,footer a:focus-visible{outline
 // tag: ok=対応済みと発表 / gold=1通で確かめて / gray=外からは見えない / managed=運営会社が管理 / out=今回の部品を使っていない（GitHub Pagesだけ）
 var NOW='10月24日';
 var HOSTS=[
- {re:/\.(xserver\.jp|xsrv\.jp|xbiz\.jp)\.?$/i,name:'エックスサーバー',tag:'ok',date:'10月22日',stat:'10月22日に、直す作業を終えたと発表しています（とても古い5.1〜5.5は、10月23日時点で過半数のサーバーで完了）。',todo:'今はなし。とても古い番号（5系）なら、業者さんに1通で確かめてください。',src:'https://www.xserver.ne.jp/news_detail.php?view_id=19734'},
+ {re:/\.(xserver\.jp|xsrv\.jp|xbiz\.jp)\.?$/i,name:'エックスサーバー',tag:'ok',oldok:true,date:'10月22日',stat:'10月22日に、直す作業を終えたと発表しています（とても古い5.1〜5.5は、10月23日時点で過半数のサーバーで完了）。',todo:'今はなし。とても古い番号（5系）なら、業者さんに1通で確かめてください。',src:'https://www.xserver.ne.jp/news_detail.php?view_id=19734'},
  {re:/\.(wpx\.ne\.jp|shin-server\.jp|xtrem\.jp)\.?$/i,name:'シン・レンタルサーバー／wpX',tag:'gold',date:'',stat:'エックスサーバーと同じ告知が出ていますが、個別の完了の発表は確認できていません。',todo:'業者さんに1通送って、終わった日付を確かめてください。',src:'https://www.xserver.ne.jp/news_detail.php?view_id=19734'},
- {re:/\.sakura\.ne\.jp\.?$/i,name:'さくらのレンタルサーバ',tag:'ok',date:'10月23日',stat:'提供しているすべての番号に修正を入れ、10月23日に作業を終えたと発表しています。',todo:'今はなし。古い番号のままでないか、業者さんに1通で確かめておいてください。',src:'https://www.sakura.ad.jp/corporate/information/announcements/2026/10/22/1968226117/'},
+ {re:/\.sakura\.ne\.jp\.?$/i,name:'さくらのレンタルサーバ',tag:'ok',oldok:true,date:'10月23日',stat:'提供しているすべての番号に修正を入れ、10月23日に作業を終えたと発表しています。',todo:'今はなし。古い番号のままでないか、業者さんに1通で確かめておいてください。',src:'https://www.sakura.ad.jp/corporate/information/announcements/2026/10/22/1968226117/'},
  {re:/\.(heteml\.jp|heteml\.net)\.?$/i,name:'ヘテムル',tag:'gold',date:'',stat:'10月22日に作業を終えたと発表しています。ただし、とても古い番号（5.6〜7.3）は直せないため、上の番号への切り替えが必要です。',todo:'今の番号を業者さんに1通で確かめてください。',src:'https://heteml.jp/info/detail/id/2954'},
- {re:/\.(lolipop\.jp|lolipop\.io|madame\.jp|pepabo\.com|muumuu-domain\.com)\.?$/i,name:'ロリポップ！',tag:'ok',date:'10月22日',stat:'10月22日に、作業を終えたと発表しています（古い番号にも独自の修正）。',todo:'今はなし。古い番号（8.1以下）のままでないか、業者さんに1通で確かめておいてください。',src:'https://lolipop.jp/info/news/8239/'},
- {re:/\.(conoha\.io|conoha\.ne\.jp|conoha\.jp)\.?$/i,name:'ConoHa WING',tag:'ok',date:'10月22日',stat:'10月22日に、番号を変えずにすべての版の修正を終えたと発表しています。',todo:'今はなし。念のため業者さんに1通送り、終わった日付をもらっておきましょう。',src:'https://www.conoha.jp/wing/news/'},
- {re:/\.(gmoserver\.jp|onamae\.com|onamae-server\.com)\.?$/i,name:'お名前.com レンタルサーバー',tag:'ok',date:'10月22日',stat:'10月22日に、番号を変えずに修正を終えたと案内しています。',todo:'今はなし。とても古い番号（5系・7系）のままなら、業者さんに1通送ってください。',src:'https://www.onamae.com/news/article/11594/'},
- {re:/\.mixhost\.jp\.?$/i,name:'mixhost',tag:'ok',date:'10月22日',stat:'10月22日に、修正を終えたと発表しています（番号は変わりません）。',todo:'今はなし。念のため業者さんに1通送り、終わった日付をもらっておきましょう。',src:'https://mixhost.jp/news/1974'},
- {re:/\.(cbox\.jp|colorfulbox\.jp)\.?$/i,name:'カラフルボックス',tag:'ok',date:'10月22日',stat:'10月22日に、すべての対象サーバーの更新を終えたと発表しています。',todo:'今はなし。念のため業者さんに1通送り、終わった日付をもらっておきましょう。',src:'https://www.colorfulbox.jp/info/detail/?id=231'},
- {re:/\.(coreserver\.jp|value-domain\.com|xrea\.com|valueserver\.jp)\.?$/i,name:'コアサーバー／XREA',tag:'ok',date:'10月22日',stat:'10月22日に、提供しているすべての番号に修正を入れたと発表しています（番号が変わらない場合もあります）。',todo:'今はなし。表示がおかしくないか、一度ホームページを開いて見てください。',src:'https://www.value-domain.com/information/detail/?no=20261022-1'},
+ {re:/\.(lolipop\.jp|lolipop\.io|madame\.jp|pepabo\.com|muumuu-domain\.com)\.?$/i,name:'ロリポップ！',tag:'ok',oldok:true,date:'10月22日',stat:'10月22日に、作業を終えたと発表しています（古い番号にも独自の修正）。',todo:'今はなし。古い番号（8.1以下）のままでないか、業者さんに1通で確かめておいてください。',src:'https://lolipop.jp/info/news/8239/'},
+ {re:/\.(conoha\.io|conoha\.ne\.jp|conoha\.jp)\.?$/i,name:'ConoHa WING',tag:'ok',oldok:true,date:'10月22日',stat:'10月22日に、番号を変えずにすべての版の修正を終えたと発表しています。',todo:'今はなし。念のため業者さんに1通送り、終わった日付をもらっておきましょう。',src:'https://www.conoha.jp/wing/news/'},
+ {re:/\.(gmoserver\.jp|onamae\.com|onamae-server\.com)\.?$/i,name:'お名前.com レンタルサーバー',tag:'ok',oldok:true,date:'10月22日',stat:'10月22日に、番号を変えずに修正を終えたと案内しています。',todo:'今はなし。とても古い番号（5系・7系）のままなら、業者さんに1通送ってください。',src:'https://www.onamae.com/news/article/11594/'},
+ {re:/\.mixhost\.jp\.?$/i,name:'mixhost',tag:'ok',oldok:true,date:'10月22日',stat:'10月22日に、修正を終えたと発表しています（番号は変わりません）。',todo:'今はなし。念のため業者さんに1通送り、終わった日付をもらっておきましょう。',src:'https://mixhost.jp/news/1974'},
+ {re:/\.(cbox\.jp|colorfulbox\.jp)\.?$/i,name:'カラフルボックス',tag:'ok',oldok:true,date:'10月22日',stat:'10月22日に、すべての対象サーバーの更新を終えたと発表しています。',todo:'今はなし。念のため業者さんに1通送り、終わった日付をもらっておきましょう。',src:'https://www.colorfulbox.jp/info/detail/?id=231'},
+ {re:/\.(coreserver\.jp|value-domain\.com|xrea\.com|valueserver\.jp)\.?$/i,name:'コアサーバー／XREA',tag:'ok',oldok:true,date:'10月22日',stat:'10月22日に、提供しているすべての番号に修正を入れたと発表しています（番号が変わらない場合もあります）。',todo:'今はなし。表示がおかしくないか、一度ホームページを開いて見てください。',src:'https://www.value-domain.com/information/detail/?no=20261022-1'},
  {re:/\.(kagoya\.net|kagoya\.jp)\.?$/i,name:'KAGOYA（カゴヤ）',tag:'gold',date:'',stat:'10月23日時点で、レンタルサーバーは更新完了と発表。専用サーバーやWordPress専用は、方針を調整中です。',todo:'どのプランかを、業者さんに1通で確かめてください。',src:'https://www.kagoya.jp/news/2026102337175/'},
  {re:/\.(cpi\.ad\.jp|secure\.ne\.jp)\.?$/i,name:'CPI（KDDIウェブ）',tag:'gold',date:'',stat:'8.2・8.3の一部は修正済みです。古いプランでは、利用者側で設定の変更や番号の切り替えをするよう案内しています（10月23日更新）。',todo:'今日中に業者さんに1通送ってください。CPIのお知らせも添えると話が早いです。',src:'https://www.cpi.ad.jp/news/support-info/261022/'},
  {re:/\.(zenlogic\.jp|firstserver\.ne\.jp|idcfcloud\.net)\.?$/i,name:'Zenlogic',tag:'gold',date:'',stat:'10月22日までに作業。とても古い番号（5.3）は、最新の番号へ自動で切り替えられました。',todo:'ホームページを開いて、表示が崩れていないか見てください。崩れていれば業者さんへ。',src:''},
@@ -479,6 +478,53 @@ async function check(h){
   if(!hit){for(i=0;i<HOSTS.length;i++){var y=HOSTS[i];if(!y.ip&&wk.some(function(c){return y.re.test(c);})){hit=y;by='ns';break;}}}
   return {hit:hit||UNKNOWN,by:by,found:!!ip||strong.length>0||weak.length>0};
 }
+var PROBE='https://script.google.com/macros/s/AKfycbyrRBfQdwP60RzxOCjvFVF9awqt01-wR1cKTJqEDd84LCoc1DVNOP1_Em6CUvSxk8Qh/exec';
+var FIXED={'8.5':[8,5,12],'8.4':[8,4,27],'8.3':[8,3,36],'8.2':[8,2,35]};
+function cmpv(a,b){for(var i=0;i<3;i++){if((a[i]||0)!==(b[i]||0))return (a[i]||0)-(b[i]||0);}return 0;}
+async function probe(h){
+  var ctl=new AbortController(),t=setTimeout(function(){ctl.abort();},20000);
+  try{var r=await fetch(PROBE+'?h='+encodeURIComponent(h),{signal:ctl.signal,cache:'no-store'});if(!r.ok)return null;return await r.json();}
+  catch(e){return null;}finally{clearTimeout(t);}
+}
+var WAIT='お気づかいありがとうございます。うちのホームページのサーバー会社に、対応の状況を確認しているところです。分かりしだいお伝えします。';
+function verdict(x,p,guess){
+  var php=null,ver='',wpv=null,wpver='';
+  if(p&&p.ok){
+    var m=/PHP\/(\d+)\.(\d+)(?:\.(\d+))?/i.exec(p.xp||'');if(m){php=[+m[1],+m[2],+(m[3]||0)];ver=m[1]+'.'+m[2]+(m[3]?'.'+m[3]:'');}
+    if(p.wpver){wpver=p.wpver;wpv=p.wpver.split('.').map(Number);}
+  }
+  var state='unknown';
+  if(php){var f=FIXED[php[0]+'.'+php[1]];if(f)state=cmpv(php,f)>=0?'fixed':'old';else state=(php[0]>8||(php[0]===8&&php[1]>5))?'fixed':'old';}
+  else if(wpv&&(wpv[0]>6||(wpv[0]===6&&wpv[1]>=3)))state='wp7';
+  var seen='';
+  if(!p||!p.ok)seen='表紙を読めませんでした（通信の都合か、ホームページが止まっています）';
+  else if(php)seen='部品の番号 '+ver+'（表紙の応答に出ていました）'+(wpver?'／WordPress '+wpver:'');
+  else if(wpver)seen='WordPress '+wpver+' で動いています／部品の番号は非表示（隠すのがふつうです）';
+  else if(p.wp)seen='WordPressで動いています／部品の番号も版も非表示';
+  else seen='部品の番号は非表示（隠すのがふつうです）';
+  var known=x!==UNKNOWN&&!guess, hostOk=known&&x.tag==='ok';
+  var o={seen:seen,stat:known?x.stat:(guess&&x!==UNKNOWN?'アドレスの管理（DNS）が'+x.name+'なので、サーバー会社も同じかもしれません。別の会社のこともあります。':'')};
+  if(state==='fixed'){
+    o.tagClass='ok';o.tagText='直した番号で動いています';
+    o.todo='今はなし。取引先に聞かれたら、下の一言で答えられます。';
+    o.answer='お気づかいありがとうございます。うちのホームページは、10月21日に公開された直した版の部品（PHP '+ver+'）で動いていることを確認しました。通常どおりご覧いただけます。';
+  }else if(state==='old'){
+    o.tagClass='gold';o.tagText='古い番号で動いています（'+ver+'）';
+    if(hostOk&&x.oldok){o.todo='業者さんに1通送り、年内に新しい番号（8.3以上）への切り替えを頼んでください。';o.stat=x.name+'は、古い番号にも独自の修正を入れたと発表しています（'+x.date+'）。ただし '+ver+' は公式のサポートが終わった番号で、次に同じことが起きても直らない可能性があります。';}
+    else{o.todo='今日中に業者さんに1通送ってください。この番号（'+ver+'）には、公式の直した版がありません。';}
+    o.answer=WAIT;
+  }else if(state==='wp7'){
+    if(hostOk&&x.oldok){o.tagClass='ok';o.tagText='対応済みの範囲に入っています';o.todo='今はなし。念のため業者さんに1通送り、終わった日付をもらっておきましょう。';
+      o.stat='WordPress '+wpver+' で動いています。この版は7系より古い部品では動かないため、'+x.name+'が'+x.date+'に直し終えたと発表した範囲に入っています。部品の番号そのものは外からは見えません。';
+      o.answer=answerFor(x,false);}
+    else if(hostOk){o.tagClass='gold';o.tagText='もう1つ確かめてください';o.todo=x.todo;o.stat='WordPress '+wpver+' で動いているので、5系ではありません。'+x.stat;o.answer=WAIT;}
+    else{o.tagClass=(known&&x.tag==='gold')?'gold':'gray';o.tagText=guess?TAG.guess:(known?TAG[x.tag]:'サーバー会社が分かりませんでした');o.todo=known?x.todo:'業者さんに1通送ってください。';o.stat='WordPress '+wpver+'（7系以上の部品）で動いています。'+(o.stat||'');o.answer=WAIT;}
+  }else{
+    if(hostOk){o.tagClass='ok';o.tagText='対応済みと発表（番号は見えません）';o.todo=x.todo;o.stat=x.stat+' 部品の番号は外からは見えませんでした（隠すのがふつうで、悪いことではありません）。確実に知るには、業者さんへの1通です。';o.answer=answerFor(x,false);}
+    else{o.tagClass=(known&&x.tag==='gold')?'gold':'gray';o.tagText=guess?TAG.guess:(known?TAG[x.tag]:'サーバー会社が分かりませんでした');o.todo=known?x.todo:'業者さんに1通送ってください。';o.answer=WAIT;}
+  }
+  return o;
+}
 function withLimit(p,ms){return Promise.race([p,new Promise(function(_,rej){setTimeout(function(){rej(new Error('net'));},ms);})]);}
 function $(id){return document.getElementById(id);}
 function answerFor(x,guess){
@@ -494,12 +540,13 @@ function show(o){
   $('rname').textContent=o.name||'';$('rname').hidden=!o.name;
   $('rtodo').textContent=o.todo||'';
   $('rstat').textContent=o.stat||'';$('rdl').hidden=!o.stat;
+  $('rseenv').textContent=o.seen||'';$('rseen').hidden=!o.seen;
   if(o.answer){$('ansText').textContent=o.answer;$('ansText').dataset.raw=o.answer;$('rans').hidden=false;}else{$('rans').hidden=true;}
   $('rnext').hidden=!o.next;
   var s=$('rsrc');s.textContent=o.src||'';s.hidden=!o.src;
   if(o.href){s.appendChild(document.createTextNode(' '));var l=document.createElement('a');l.href=o.href;l.target='_blank';l.rel='noopener';l.textContent='公式のお知らせ';s.appendChild(l);}
-  if(window.__bx){['rtodo','rstat','rname','rsrc','ansText'].forEach(function(id){window.__bx.applyToElement($(id));});}
-  $('rstatus').textContent='結果：'+(o.name?o.name+'。':'')+(o.tagText?o.tagText+'。':'')+'社長がやること：'+(o.todo||'');
+  if(window.__bx){['rtodo','rstat','rseenv','rname','rsrc','ansText'].forEach(function(id){window.__bx.applyToElement($(id));});}
+  $('rstatus').textContent='結果：'+(o.name?o.name+'。':'')+(o.tagText?o.tagText+'。':'')+(o.seen?'外から見えたこと：'+o.seen+'。':'')+'社長がやること：'+(o.todo||'');
 }
 var dom=$('dom'),go=$('go');
 function invalid(on){if(on){dom.setAttribute('aria-invalid','true');dom.setAttribute('aria-describedby','domhint rtodo');}else{dom.removeAttribute('aria-invalid');dom.setAttribute('aria-describedby','domhint');}}
@@ -509,15 +556,19 @@ go.addEventListener('click',async function(){
   if(FREEMAIL.test(h)){show({tagClass:'gray',tagText:'個人用のメールの会社です',todo:'「'+h+'」は個人用のメールの会社です。名刺に刷ってある www〜 か、会社のメールアドレスの @ から後ろを入れてください。'});invalid(true);dom.focus();return;}
   invalid(false);
   go.disabled=true;go.setAttribute('aria-busy','true');go.textContent='確かめています…';$('rstatus').textContent='確かめています。';
-  var fixed='サーバー会社は外から見える手がかりで判定し、発表は'+NOW+'時点のものです。中の設定までは見ていません。';
+  var fixed='サーバー会社は外から見える手がかりで判定し、発表は'+NOW+'時点のものです。部品の番号は表紙の応答に出ているときだけ分かります。中の設定までは見ていません。';
   try{
     var r=await withLimit(check(h),12000),x=r.hit;
     if(!r.found){show({tagClass:'gray',tagText:'見つかりませんでした',todo:'アドレス「'+h+'」が見つかりませんでした。名刺やメールの @ の後ろを、もう一度確かめてください。'});invalid(true);}
-    else if(r.by==='ns'&&x!==UNKNOWN){show({tagClass:'gray',tagText:TAG.guess,name:x.name,todo:'違うこともあるので、業者さんに1通送って確かめてください。',stat:'アドレスの管理（DNS）が'+x.name+'なので、サーバー会社も同じかもしれません。別の会社のこともあります。',answer:answerFor(x,true),next:true,src:fixed,href:x.src});}
-    else{show({tagClass:x.tag,tagText:TAG[x.tag],name:x.name,todo:x.todo,stat:x.stat,answer:answerFor(x,false),next:true,src:fixed,href:x.src});}
+    else if(x!==UNKNOWN&&r.by!=='ns'&&(x.tag==='managed'||x.tag==='out')){show({tagClass:x.tag,tagText:TAG[x.tag],name:x.name,todo:x.todo,stat:x.stat,answer:answerFor(x,false),next:true,src:fixed,href:x.src});}
+    else{
+      go.textContent='表紙を読んでいます…';$('rstatus').textContent='ホームページの表紙を読んでいます。';
+      var p=await probe(h),guess=(r.by==='ns'&&x!==UNKNOWN),v=verdict(x,p,guess);
+      show({tagClass:v.tagClass,tagText:v.tagText,name:x!==UNKNOWN?x.name:'',todo:v.todo,stat:v.stat,seen:v.seen,answer:v.answer,next:true,src:fixed,href:x!==UNKNOWN?x.src:''});
+    }
     $('res').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
   }catch(e){show({tagClass:'gray',tagText:'調べられませんでした',todo:'通信の都合で調べられませんでした。少し待ってからもう一度押すか、LINEかメールでアドレスを送ってください。',next:true});}
-  go.disabled=false;go.removeAttribute('aria-busy');go.textContent='確かめる（無料）';
+  go.disabled=false;go.removeAttribute('aria-busy');go.textContent='確かめる';
 });
 dom.addEventListener('keydown',function(e){if(e.key==='Enter'&&!e.isComposing&&e.keyCode!==229){e.preventDefault();go.click();}});
 document.querySelectorAll('.copybtn').forEach(function(b){b.addEventListener('click',async function(){
