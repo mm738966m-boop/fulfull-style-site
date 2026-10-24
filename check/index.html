@@ -481,11 +481,12 @@ async function check(h){
 var PROBE='https://script.google.com/macros/s/AKfycbyrRBfQdwP60RzxOCjvFVF9awqt01-wR1cKTJqEDd84LCoc1DVNOP1_Em6CUvSxk8Qh/exec';
 var FIXED={'8.5':[8,5,12],'8.4':[8,4,27],'8.3':[8,3,36],'8.2':[8,2,35]};
 function cmpv(a,b){for(var i=0;i<3;i++){if((a[i]||0)!==(b[i]||0))return (a[i]||0)-(b[i]||0);}return 0;}
-async function probe(h){
-  var ctl=new AbortController(),t=setTimeout(function(){ctl.abort();},20000);
+async function probe1(h,ms){
+  var ctl=new AbortController(),t=setTimeout(function(){ctl.abort();},ms);
   try{var r=await fetch(PROBE+'?h='+encodeURIComponent(h),{signal:ctl.signal,cache:'no-store'});if(!r.ok)return null;return await r.json();}
   catch(e){return null;}finally{clearTimeout(t);}
 }
+async function probe(h){var p=await probe1(h,15000);if(p&&p.ok)return p;return await probe1(h,15000);}
 var WAIT='お気づかいありがとうございます。うちのホームページのサーバー会社に、対応の状況を確認しているところです。分かりしだいお伝えします。';
 function verdict(x,p,guess){
   var php=null,ver='',wpv=null,wpver='';
