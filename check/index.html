@@ -503,7 +503,7 @@ function verdict(x,p,guess){
   else if(p.wp)seen='WordPressで動いています／部品の番号も版も非表示';
   else seen='部品の番号は非表示（隠すのがふつうです）';
   var known=x!==UNKNOWN&&!guess, hostOk=known&&x.tag==='ok';
-  var o={seen:seen,stat:known?x.stat:(guess&&x!==UNKNOWN?'アドレスの管理（DNS）が'+x.name+'なので、サーバー会社も同じかもしれません。別の会社のこともあります。':'')};
+  var o={seen:seen,stat:known?x.stat:(guess&&x!==UNKNOWN?'アドレスの管理（DNS）が'+x.name+'なので、サーバー会社も同じかもしれません。別の会社のこともあります。':UNKNOWN.stat)};
   if(state==='fixed'){
     o.tagClass='ok';o.tagText='直した番号で動いています';
     o.todo='今はなし。取引先に聞かれたら、下の一言で答えられます。';
@@ -564,7 +564,7 @@ go.addEventListener('click',async function(){
     else{
       go.textContent='表紙を読んでいます…';$('rstatus').textContent='ホームページの表紙を読んでいます。';
       var p=await probe(h),guess=(r.by==='ns'&&x!==UNKNOWN),v=verdict(x,p,guess);
-      show({tagClass:v.tagClass,tagText:v.tagText,name:x!==UNKNOWN?x.name:'',todo:v.todo,stat:v.stat,seen:v.seen,answer:v.answer,next:true,src:fixed,href:x!==UNKNOWN?x.src:''});
+      show({tagClass:v.tagClass,tagText:v.tagText,name:x.name,todo:v.todo,stat:v.stat,seen:v.seen,answer:v.answer,next:true,src:fixed,href:x.src});
     }
     $('res').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
   }catch(e){show({tagClass:'gray',tagText:'調べられませんでした',todo:'通信の都合で調べられませんでした。少し待ってからもう一度押すか、LINEかメールでアドレスを送ってください。',next:true});}
