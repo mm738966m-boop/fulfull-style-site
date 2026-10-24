@@ -559,7 +559,7 @@ go.addEventListener('click',async function(){
   go.disabled=true;go.setAttribute('aria-busy','true');go.textContent='確かめています…';$('rstatus').textContent='確かめています。';
   var fixed='サーバー会社は外から見える手がかりで判定し、発表は'+NOW+'時点のものです。部品の番号は表紙の応答に出ているときだけ分かります。中の設定までは見ていません。';
   try{
-    var r=await withLimit(check(h),12000),x=r.hit;
+    var r;try{r=await withLimit(check(h),12000);}catch(e1){r=await withLimit(check(h),12000);}var x=r.hit;
     if(!r.found){show({tagClass:'gray',tagText:'見つかりませんでした',todo:'アドレス「'+h+'」が見つかりませんでした。名刺やメールの @ の後ろを、もう一度確かめてください。'});invalid(true);}
     else if(x!==UNKNOWN&&r.by!=='ns'&&(x.tag==='managed'||x.tag==='out')){show({tagClass:x.tag,tagText:TAG[x.tag],name:x.name,todo:x.todo,stat:x.stat,answer:answerFor(x,false),next:true,src:fixed,href:x.src});}
     else{
