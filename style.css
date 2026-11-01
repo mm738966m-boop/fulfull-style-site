@@ -13,10 +13,11 @@ img { max-width: 100%; height: auto; }
 a { color: var(--teal); font-weight: 700; }
 p { margin: 0 0 .9em; }
 p, li, h1, h2, h3, dd, small { text-wrap: pretty; }
-.l { display: block; text-wrap: balance; }
+.l { display: block; text-wrap: pretty; }
 /* 日本語を文節の切れ目で折り返す（対応ブラウザのみ） */
 .l, h1, h2, h3, li, td, summary, .note, .chat p { word-break: auto-phrase; }
-.priceone li, .plan li, .checks b, .gets b, .steps b, .tile span span, .field small, .note, .faq summary, td { text-wrap: balance; }
+.priceone li, .plan li, .checks b, .gets b, .steps b, .how b, .whoweare b, .tile span span, .field small, .note, td { text-wrap: balance; }
+.faq summary { text-wrap: pretty; }
 b, strong { font-weight: 800; color: var(--deep); }
 .wrap { max-width: 1040px; margin: 0 auto; padding-inline: 20px; }
 .narrow { max-width: 760px; margin: 0 auto; padding-inline: 20px; }
@@ -500,3 +501,32 @@ html, body { overflow-x: clip; }
   .hero.has-now .now p { margin: 0; font-size: 15px; }
 }
 @media (max-width: 899px) { .hero .btnrow { order: 3; } .hero .pricechip { order: 5; margin-top: 14px; } }
+
+/* 第10版（11/2）：改行・寄り・動きの手直し */
+.nw { white-space: nowrap; }
+.readable .wrap { max-width: 800px; }
+.close .alt2 { margin: 14px auto 0; }
+@media (min-width: 820px) { .close .alt2 { margin-left: 0; } }
+@media (max-width: 599px) {
+  .whoweare { grid-template-columns: 1fr; gap: 10px; }
+  .whoweare img { width: 100%; aspect-ratio: 16 / 7; }
+  .fbar span { font-size: 14px; }
+}
+#prog { position: fixed; left: 0; top: 0; height: 3px; width: 100%; background: linear-gradient(90deg, var(--teal), var(--goldfill)); transform-origin: 0 50%; transform: scaleX(0); z-index: 60; pointer-events: none; }
+.btn { transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
+@media (prefers-reduced-motion: no-preference) {
+  .btn:not(.ghost):hover { transform: translateY(-2px); box-shadow: 0 8px 0 #04913E; }
+  .btn.ghost:hover { transform: translateY(-2px); }
+  .tabs button, .whochips li { transition: transform .2s ease, background .2s ease, color .2s ease; }
+  .tabs button:hover, .whochips li:hover { transform: translateY(-2px); }
+  /* 見出しの下に金の線が引かれる */
+  section h2::after { content: ""; display: block; width: 0; height: 4px; border-radius: 2px; background: var(--goldfill); margin-top: 10px; transition: width .8s .35s cubic-bezier(.2,.7,.2,1); }
+  .js section h2.rv.in::after { width: 56px; }
+  .close h2::after { background: var(--goldfill); margin-inline: auto; } @media (min-width: 820px) { .close h2::after { margin-inline: 0; } }
+  /* 札・チップはふわっと大きくなる */
+  .js .whochips li.rv, .js .pricechip li.rv { transform: translateY(14px) scale(.9); } .js .whochips li.rv.in, .js .pricechip li.rv.in { transform: none; }
+  .js .priceone li.rv { transform: translateX(-14px); } .js .priceone li.rv.in { transform: none; }
+  /* よくある質問の答えがすっと出る */
+  .faq details[open] > *:not(summary) { animation: rise .4s cubic-bezier(.2,.7,.2,1) both; }
+}
+@media (max-width: 599px) { .faq summary { font-size: 17.5px; padding-right: 40px; } }
