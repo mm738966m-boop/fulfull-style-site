@@ -8,13 +8,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;800;900&display=swap">
-<link rel="stylesheet" href="../style.css?v=19">
+<link rel="stylesheet" href="../style.css?v=26">
 </head>
 <body>
 <header class="top">
   <div class="wrap">
     <a class="brand" href="../"><b>fulfull</b><span>ホームページ制作</span></a>
-    <nav><a href="../#price">料金</a><a href="../#faq">よくある質問</a><a class="cta" href="../apply/">申し込む</a></nav>
+    <nav><a href="../#price">料金</a><a href="../#faq">よくある質問</a><a class="cta" href="../apply/">無料で案を見る</a></nav>
   </div>
 </header>
 <main class="doc"><div class="narrow">
@@ -31,7 +31,7 @@
   <div class="field"><label for="memo">伝えておきたいこと<span class="opt">書かなくても大丈夫です</span></label><textarea id="memo" name="memo" rows="4" placeholder="例：採用のページを充実させたい／載せたい実績がある"></textarea></div>
   <div class="hp" aria-hidden="true"><label>このまま空欄にしてください<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
   <p class="note">毎月の料金は、できあがりの案を見てから選べます。いまは決めなくて大丈夫です。</p>
-  <p class="note">お送りいただいた内容は、案を作ることとそのご連絡にだけ使います。<a href="../terms/">利用規約</a>・<a href="../privacy/">プライバシーポリシー</a></p>
+  <p class="note">案づくりには、御社がホームページなどで公開している写真や文章を使います。お申し込みいただくと、そのことにご同意いただいたものとします。<br>お送りいただいた内容は、案を作ることとそのご連絡にだけ使います。<a href="../terms/">利用規約</a>・<a href="../privacy/">プライバシーポリシー</a></p>
   <div id="msg" class="msg" tabindex="-1" hidden></div>
   <div class="center"><button class="btn" type="submit" data-label="無料で申し込む">無料で申し込む</button></div>
 </form>
@@ -77,5 +77,6 @@ form.addEventListener("submit", async (e) => {
   }
 });
 </script>
+<script>try{var to=new URLSearchParams(location.search).get("to"),c=document.getElementById("company");if(to&&c&&!c.value)c.value=to.slice(0,40)}catch(e){}</script>
 </body>
 </html>
