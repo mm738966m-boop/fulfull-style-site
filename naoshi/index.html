@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>直しのご依頼｜fulfull ホームページ制作</title>
+<meta name="description" content="公開したホームページの直したいところを、文章でお知らせください。翌営業日までに載せて、見られる場所をお返しします。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;800;900&display=swap">
+<link rel="stylesheet" href="../style.css?v=26">
+<style>
+/* style.css の「.field label」が .tile を縦並びにしてしまうので、この画面だけ直す */
+.field label.tile{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:start;margin:0;font-weight:500;color:var(--ink)}
+.field label.tile b{font-weight:800;color:var(--deep)}
+.field label.tile span span{font-weight:500;margin-top:2px}
+.field label.tile input{margin:5px 0 0}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../"><b>fulfull</b><span>ホームページ制作</span></a>
+    <nav><a href="../#price">料金</a><a href="../#faq">よくある質問</a><a class="cta" href="../apply/">無料で案を見る</a></nav>
+  </div>
+</header>
+<main class="doc"><div class="narrow">
+<div class="eyebrow">公開後の直し（2分ほど）</div>
+<h1>ホームページの直しを頼む</h1>
+<div class="say wide applysay"><img src="../img/mascot_invite.webp" alt="" width="440" height="440"><p><span class="l">直したいことを、</span><span class="l">ふだんの言葉で書いてください。</span><span class="l">写真はLINEで送れます。</span></p></div>
+
+<form class="form" id="f" data-kind="naoshi" novalidate>
+  <input type="hidden" id="cid" name="c" value="">
+  <div class="field"><label for="company">会社名<span class="req">必須</span></label><input id="company" name="company" type="text" autocomplete="organization" required></div>
+  <div class="field"><label for="name">ご担当の方のお名前<span class="req">必須</span></label><input id="name" name="name" type="text" autocomplete="name" required></div>
+  <div class="field"><label for="email">メールアドレス<span class="req">必須</span></label><input id="email" name="email" type="email" autocomplete="email" inputmode="email" required><small>載せたあとのご連絡は、このメールアドレスにお送りします。</small></div>
+  <div class="field"><label for="memo">直したいこと<span class="req">必須</span></label><textarea id="memo" name="memo" rows="6" required placeholder="例：トップページの社長のあいさつを、下の文章に差し替えたい／お知らせに「年末年始の休業日」を1件足したい"></textarea><small>どのページの、どこを、どう直したいかを書いてください。長くなっても大丈夫です。</small></div>
+  <fieldset class="field">
+    <legend>写真について<span class="req">必須</span></legend>
+    <div class="tiles">
+      <label class="tile"><input type="radio" name="photo" value="line" required><span style="font-size:18px;color:var(--ink)"><b>LINEで送る</b><span>差し替えたい写真があるときは、こちらです。送信のあと、LINEのボタンが出ます。</span></span></label>
+      <label class="tile"><input type="radio" name="photo" value="none"><span style="font-size:18px;color:var(--ink)"><b>写真はなし</b><span>文章だけの直しです。</span></span></label>
+    </div>
+  </fieldset>
+  <div class="hp" aria-hidden="true"><label>このまま空欄にしてください<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+  <p class="note">お送りいただいた内容は、直しの作業とそのご連絡にだけ使います。<a href="../privacy/">プライバシーポリシー</a></p>
+  <div id="msg" class="msg" tabindex="-1" hidden></div>
+  <div class="center"><button class="btn" type="submit" data-label="この内容で頼む">この内容で頼む</button></div>
+  <p class="note center">うまく送れないときは、<a id="mail" href="mailto:info@fulfull-style.com?subject=%E7%9B%B4%E3%81%97%E3%81%AE%E3%81%94%E4%BE%9D%E9%A0%BC">info@fulfull-style.com</a> にメールで書いて送っても大丈夫です。</p>
+</form>
+
+<div id="done" class="scene" tabindex="-1" hidden>
+  <h2 style="margin-top:0;border:0;padding:0">受け付けました</h2>
+  <p>受付番号：<b id="no">—</b></p>
+  <p><span class="l">翌営業日までに載せて、見られる場所をお返しします。</span><span class="l">写真はLINEで送ってください。</span><span class="l">LINEを開いたら、受付番号を送信してください。</span></p>
+  <p class="center"><a class="btn" href="https://line.me/R/ti/p/@260picvu" target="_blank" rel="noopener">LINEで写真を送る</a></p>
+  <p class="note">土・日・祝日はお休みです。メールの控えもお送りしました。届かないときは、「迷惑メール」という場所もご確認ください。</p>
+  <p><a href="../">トップへ戻る</a></p>
+</div>
+</div></main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 fulfull株式会社</span>
+    <nav><a href="../terms/">利用規約</a><a href="../law/">特定商取引法に基づく表記</a><a href="../privacy/">プライバシーポリシー</a><a href="https://fulfull.jp/">fulfull.jp</a></nav>
+  </div>
+</footer>
+<script>
+// 受け口（apply と同じ GAS のウェブアプリURL）。kind:"naoshi" で送る。
+const API = "https://script.google.com/macros/s/AKfycbxfERWHfQpd6anzqKjWJQVfpMv0J7oXV4vzUqxmphxbXaXxM5Nr-XLqSeeCMMDy6q2aDw/exec";
+const form = document.getElementById("f");
+const msg = document.getElementById("msg");
+const done = document.getElementById("done");
+function show(kind, text){ msg.className = "msg " + kind; msg.textContent = text; msg.hidden = false; msg.focus(); }
+// ?c=<id> は見えない欄へ。?to=<会社名> があれば会社名に入れる（静的ページなので台帳は引かない）
+try {
+  const q = new URLSearchParams(location.search);
+  const c = (q.get("c") || "").replace(/[^A-Za-z0-9_-]/g, "").slice(0, 40);
+  document.getElementById("cid").value = c;
+  const to = q.get("to"), co = document.getElementById("company");
+  if (to && co && !co.value) co.value = to.slice(0, 40);
+  if (c) document.getElementById("mail").href = "mailto:info@fulfull-style.com?subject=" + encodeURIComponent("直しのご依頼（" + c + "）");
+} catch (e) {}
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  if (!form.reportValidity()) return;
+  const data = Object.fromEntries(new FormData(form).entries());
+  data.kind = form.dataset.kind; data.page = location.pathname; data.at = new Date().toISOString();
+  if (data.website) return;               // 見えない欄に入力があれば機械とみなす
+  const btn = form.querySelector("button[type=submit]"); btn.disabled = true; btn.textContent = "送っています…";
+  try {
+    const r = await fetch(API, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(data) });
+    const j = await r.json();
+    if (!j.ok) throw new Error(j.error || "error");
+    form.hidden = true; done.hidden = false;
+    const no = document.getElementById("no"); if (no && j.no) no.textContent = j.no;
+    done.focus();
+  } catch (err) {
+    btn.disabled = false; btn.textContent = btn.dataset.label;
+    show("err", "送信できませんでした。電波の良い場所でもう一度お試しください。うまくいかないときは、下のメールアドレスにお送りください。");
+  }
+});
+</script>
+</body>
+</html>
