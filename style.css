@@ -16,7 +16,8 @@ p, li, h1, h2, h3, dd, small { text-wrap: pretty; }
 .l { display: block; text-wrap: pretty; }
 /* 日本語を文節の切れ目で折り返す（対応ブラウザのみ） */
 .l, h1, h2, h3, li, td, summary, .note, .chat p { word-break: auto-phrase; }
-.priceone li, .plan li, .checks b, .gets b, .steps b, .how b, .whoweare b, .tile span span, .field small, .note, td { text-wrap: balance; }
+.priceone li, .plan li, .checks b, .gets b, .steps b, .how b, .whoweare b, .tile span span, .note, td { text-wrap: balance; }
+.field small { text-wrap: pretty; word-break: auto-phrase; }
 .faq summary { text-wrap: pretty; }
 b, strong { font-weight: 800; color: var(--deep); }
 .wrap { max-width: 1040px; margin: 0 auto; padding-inline: 20px; }
