@@ -316,7 +316,7 @@
   }
   // メール・はがきから来た方へ、宛名を出す（?to=会社名）
   try{ var sl=new URLSearchParams(location.search).get("s"); if(sl && /^[a-z0-9]{6,16}$/.test(sl)){ var nw=document.querySelector(".hero .now"); var ni=nw.querySelector("img"); ni.onerror=function(){ nw.hidden=true; document.querySelector(".hero").classList.remove("has-now"); }; ni.src="an/"+sl+"/m/first_now.jpg"; nw.hidden=false; document.querySelector(".hero").classList.add("has-now"); } }catch(e){}
-  try{ var to=new URLSearchParams(location.search).get("to"); if(to){ to=to.slice(0,40); var t=document.querySelector(".toname"); t.textContent=to+"さまへ　ご案内をお送りした fulfull です"; t.hidden=false; document.querySelectorAll('a[href^="apply/"]').forEach(function(a){a.href=a.href+(a.href.indexOf("?")<0?"?":"&")+"to="+encodeURIComponent(to)}); } }catch(e){}
+  try{ var to=new URLSearchParams(location.search).get("to"); if(to){ to=to.slice(0,40); var t=document.querySelector(".toname"); t.textContent=to+"さまへ　ご案内をお送りした fulfull です"; t.hidden=false; var q0=new URLSearchParams(location.search),mr=q0.get("ref")||"",mv=q0.get("v")||""; document.querySelectorAll('a[href^="apply/"]').forEach(function(a){a.href=a.href+(a.href.indexOf("?")<0?"?":"&")+"to="+encodeURIComponent(to)+(mr?"&mref="+encodeURIComponent(mr):"")+(mv?"&v="+encodeURIComponent(mv):"")}); } }catch(e){}
   // 業種の指定（?g=seizo|unso|kensetsu）：最初の見本とタブを、その業種にする
   try{ var g=new URLSearchParams(location.search).get("g"), gi={seizo:0,unso:1,kensetsu:2}[g];
     if(gi!==undefined){ var hc=document.querySelector(".hero .cmp"), im=hc.querySelectorAll("img"); im[0].src="sample/shots/"+g+"_after_pc.jpg"; im[1].src="sample/shots/"+g+"_before_pc.jpg";
